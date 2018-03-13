@@ -1,0 +1,40 @@
+title: Edward Runkel
+email: edwardalanrunkel@gmail.com
+description: >-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+twitter_username: erunks
+github_username:  erunks
+linkedin_username: edwardrunkel
+
+#Markdown Settings
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids:      true
+  entity_output: as_char
+  toc_levels:    1..6
+  smart_quotes:  lsquo,rsquo,ldquo,rdquo
+  input:         GFM
+  hard_wrap:     false
+  footnote_nr:   1
+  show_warnings: false
+
+#Build Settings
+data_dir:       _data
+includes_dir:   _includes
+
+plugins: [liquid, sass]
+
+sass:
+  sass_dir: _sass
+  style: compact # possible values: nested expanded compact compressed
+
+liquid:
+  error_mode: warn

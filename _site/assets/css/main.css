@@ -1,0 +1,5 @@
+.hidden { width: 0px; height: 0px; display: none; visibility: hidden; }
+
+.nav-menu { padding: 10px 20px 10px 0; border: 1px solid black; }
+
+.nav-menu-icon { font-size: 1.5em; float: left; margin: auto 20px; }
