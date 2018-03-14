@@ -1,6 +1,8 @@
+/* Does exactly what the function name says,
+also handles all the animation transitions
+for the nav-menu and paired screen overlay */
 function toggleNav(){
   var nav = $('.nav-menu')[0];
-  var icon = $('.nav-menu-icon')[0];
   var screenOverlay = $('.overlay-screen')[0];
 
   $(nav).on('animationend',function(event){

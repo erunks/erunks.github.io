@@ -1,22 +1,24 @@
 ---
+layout: default
+title: Let's Get in Touch
 ---
 
-<!doctype html>
-
-<html lang="en">
-  <head>
-    {% include meta.html %}
-    <meta name="title" content="Let's Get in Touch"/>
-
-    {% include scripts.html %}
-  </head>
-
-  <body>
-    <div class="row">
-      {% include sidenav.html %}
-      <div class="col-11-xs">
-        <h1>Contact...</h1>
-      </div>
-    </div>
-  </body>
-</html>
+<h1>Let's Get in Touch</h1>
+<p>
+  Whether you have a project, or just simply want some advice, feel free to drop me an email and I'll be sure to get back to you as soon as possible.
+</p>
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" type="text" class="form-control" placeholder="John Doe"></input>
+  </div>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input id="email" type="email" class="form-control" placeholder="johndoe@example.com"></input>
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" class="form-control" rows="5"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
