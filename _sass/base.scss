@@ -1,6 +1,20 @@
 .hidden{
-  width: 0px;
-  height: 0px;
   display: none;
+  height: 0px;
   visibility: hidden;
-}
+  width: 0px;
+};
+
+.overlay-screen{
+  background-color: rgba(130,130,130,0.5);
+  height: 100%;
+  height: -webkit-fill-available;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  // transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  width: -webkit-fill-available;
+  z-index: 9;
+};
