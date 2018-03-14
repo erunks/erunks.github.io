@@ -2,5 +2,59 @@
 layout: default
 title: About Me
 ---
-
+<script>
+  $(function(){
+    calculateBarFill();
+  });
+</script>
 <h1>About...</h1>
+<h2>Languages</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-12-xs">
+      {% for language in site.data.known-languages %}
+        <div class="container">
+          <div class="row">
+            <div class="col-12-xs">
+              <span>{{ language[1].name }}</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6-xs" style="margin: auto 10px;">
+              <span>
+                {% if language[1].inUse %}
+                  <i class="far fa-check-square"></i>
+                {% else %}
+                  <i class="far fa-square"></i>
+                {% endif %}
+                Currently in Use
+              </span>
+            </div>
+            <div class="col-6-xs" style="margin: auto 10px;">
+              <span>
+                {% if language[1].formallyLearned %}
+                  <i class="far fa-check-square"></i>
+                {% else %}
+                  <i class="far fa-square"></i>
+                {% endif %}
+                Taught in School
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12-xs" style="width: 100%; width: -webkit-fill-available;">
+              <div class="skill-tube">
+                <div class="skill-fill {{ language[0] }}" data='{"init" : "{{ language[1].initDate }}", "active" : "{{ language[1].activeDate }}"}'>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% unless forloop.last %}
+          <hr/>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

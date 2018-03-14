@@ -1,3 +1,19 @@
+function calculateBarFill(){
+  $('.skill-fill').each(function(i,e){
+    // console.log(i,e);
+    var json = JSON.parse(e.attributes['data'].value);
+    var start = new Date(json["init"]);
+    var end = (json["active"] == "") ? new Date() : new Date(json["active"]);
+
+    var age = (new Date()) - (new Date("2013-09-01T00:00:00.000"));
+    var elapsedYear = end - start;
+    var elementWidth = window.getComputedStyle(e,null).length;
+
+    var percentage = (elapsedYear/age) * 100.0;
+    e.setAttribute("style","width: "+percentage+"%; display: block; visibility: visible;");
+  });
+};
+
 /* Does exactly what the function name says,
 also handles all the animation transitions
 for the nav-menu and paired screen overlay */

@@ -1,0 +1,128 @@
+{
+  "arm" : {
+    "name" : "ARM",
+    "initDate" : "2016-01-01T00:00:00.000",
+    "activeDate" : "2016-05-01T00:00:00.000",
+    "inUse" : false,
+    "formallyLearned" : true
+  },
+  "intelx86" : {
+    "name" : "IntelX86",
+    "initDate" : "2015-09-01T00:00:00.000",
+    "activeDate" : "2015-12-01T00:00:00.000",
+    "inUse" : false,
+    "formallyLearned" : true
+  },
+  "c" : {
+    "name" : "C",
+    "initDate" : "2014-01-01T00:00:00.000",
+    "activeDate" : "2016-05-01T00:00:00.000",
+    "inUse" : false,
+    "formallyLearned" : true
+  },
+  "cpp" : {
+    "name" : "C++",
+    "initDate" : "2015-09-01T00:00:00.000",
+    "activeDate" : "2017-06-01T00:00:00.000",
+    "inUse" : false,
+    "formallyLearned" : true
+  },
+  "csharp" : {
+    "name" : "C#",
+    "initDate" : "2016-01-01T00:00:00.000",
+    "activeDate" : "2016-05-01T00:00:00.000",
+    "inUse" : false,
+    "formallyLearned" : false
+  },
+  "java" : {
+    "name" : "Java",
+    "initDate" : "2014-01-01T00:00:00.000",
+    "activeDate" : "2017-06-01T00:00:00.000",
+    "inUse" : false,
+    "formallyLearned" : true
+  },
+  "mathpiper" : {
+    "name" : "MathPiper",
+    "initDate" : "2015-09-01T00:00:00.000",
+    "activeDate" : "2015-12-01T00:00:00.000",
+    "inUse" : false,
+    "formallyLearned" : true
+  },
+  "javascript" : {
+    "name" : "JavaScript",
+    "initDate" : "2014-01-01T00:00:00.000",
+    "activeDate" : "",
+    "inUse" : true,
+    "formallyLearned" : true
+  },
+  "typescript" : {
+    "name" : "TypeScript",
+    "initDate" : "2015-09-01T00:00:00.000",
+    "activeDate" : "2015-12-01T00:00:00.000",
+    "inUse" : false,
+    "formallyLearned" : false
+  },
+  "html" : {
+    "name" : "HTML",
+    "initDate" : "2016-01-01T00:00:00.000",
+    "activeDate" : "",
+    "inUse" : true,
+    "formallyLearned" : true
+  },
+  "css" : {
+    "name" : "CSS",
+    "initDate" : "2016-01-01T00:00:00.000",
+    "activeDate" : "",
+    "inUse" : true,
+    "formallyLearned" : true
+  },
+  "less" : {
+    "name" : "LESS",
+    "initDate" : "2017-10-01T00:00:00.000",
+    "activeDate" : "",
+    "inUse" : true,
+    "formallyLearned" : false
+  },
+  "sass" : {
+    "name" : "Sass",
+    "initDate" : "2018-03-12T00:00:00.000",
+    "activeDate" : "",
+    "inUse" : true,
+    "formallyLearned" : false
+  },
+  "php" : {
+    "name" : "PHP",
+    "initDate" : "2018-01-01T00:00:00.000",
+    "activeDate" : "",
+    "inUse" : true,
+    "formallyLearned" : false
+  },
+  "ruby" : {
+    "name" : "Ruby",
+    "initDate" : "2016-01-01T00:00:00.000",
+    "activeDate" : "",
+    "inUse" : true,
+    "formallyLearned" : true
+  },
+  "crystal" : {
+    "name" : "Crystal",
+    "initDate" : "2017-01-01T00:00:00.000",
+    "activeDate" : "",
+    "inUse" : true,
+    "formallyLearned" : false
+  },
+  "python" : {
+    "name" : "Python",
+    "initDate" : "2013-09-01T00:00:00.000",
+    "activeDate" : "",
+    "inUse" : true,
+    "formallyLearned" : true
+  },
+  "sql" : {
+    "name" : "SQL",
+    "initDate" : "2015-09-01T00:00:00.000",
+    "activeDate" : "2015-12-01T00:00:00.000",
+    "inUse" : false,
+    "formallyLearned" : true
+  }
+}

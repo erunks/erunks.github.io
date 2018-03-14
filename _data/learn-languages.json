@@ -1,0 +1,66 @@
+{
+  "cobol" : {
+    "name" : "COBOL",
+    "dabbled" : false
+  },
+  "fortran" : {
+    "name" : "Fortran",
+    "dabbled" : false
+  },
+  "lisp" : {
+    "name" : "Lisp",
+    "dabbled" : false
+  },
+  "elixir" : {
+    "name" : "Elixir",
+    "dabbled" : true
+  },
+  "clojure" : {
+    "name" : "Clojure",
+    "dabbled" : false
+  },
+  "rust" : {
+    "name" : "Rust",
+    "dabbled" : false
+  },
+  "r" : {
+    "name" : "R",
+    "dabbled" : true
+  },
+  "lua" : {
+    "name" : "Lua",
+    "dabbled" : true
+  },
+  "swift" : {
+    "name" : "Swift",
+    "dabbled" : false
+  },
+  "basic256" : {
+    "name" : "Basic-256",
+    "dabbled" : true
+  },
+  "nim" : {
+    "name" : "Nim",
+    "dabbled" : false
+  },
+  "go" : {
+    "name" : "Go",
+    "dabbled" : true
+  },
+  "haskell" : {
+    "name" : "Haskell",
+    "dabbled" : false
+  },
+  "prolog" : {
+    "name" : "Prolog",
+    "dabbled" : false
+  },
+  "pascal" : {
+    "name" : "Pascal",
+    "dabbled" : false
+  },
+  "ocaml" : {
+    "name" : "OCaml",
+    "dabbled" : false
+  }
+}

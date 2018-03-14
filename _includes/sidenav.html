@@ -4,7 +4,7 @@
       <div class="col-11-xs">
         <ul>
           {% for page in site.pages %}
-            {% unless page.url contains "asset" %}
+            {% unless page.url contains "asset" or page.url contains "base" or page.url contains "thanks" %}
               {% assign pageName = page.url | remove_first: "/" %}
               {% if pageName == "" %}
                 {% assign pageName = "index.html" %}
