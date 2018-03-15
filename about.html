@@ -7,20 +7,20 @@ title: About Me
     calculateBarFill();
   });
 </script>
-<h1>About...</h1>
-<h2>Languages</h2>
 <div class="container">
   <div class="row">
-    <div class="col-12-xs">
+    <div class="col-xs-12 col-lg-12">
+      <h1>About...</h1>
+      <h2>Languages</h2>
       {% for language in site.data.known-languages %}
         <div class="container">
           <div class="row">
-            <div class="col-12-xs">
+            <div class="col-xs-12 col-lg-12">
               <span>{{ language[1].name }}</span>
             </div>
           </div>
           <div class="row">
-            <div class="col-6-xs" style="margin: auto 10px;">
+            <div class="col-xs-6 col-lg-6" style="margin: auto 10px;">
               <span>
                 {% if language[1].inUse %}
                   <i class="far fa-check-square"></i>
@@ -30,7 +30,7 @@ title: About Me
                 Currently in Use
               </span>
             </div>
-            <div class="col-6-xs" style="margin: auto 10px;">
+            <div class="col-xs-6 col-lg-6" style="margin: auto 10px;">
               <span>
                 {% if language[1].formallyLearned %}
                   <i class="far fa-check-square"></i>
@@ -42,7 +42,7 @@ title: About Me
             </div>
           </div>
           <div class="row">
-            <div class="col-12-xs" style="width: 100%; width: -webkit-fill-available;">
+            <div class="col-xs-12 col-lg-12" style="width: 100%; width: -webkit-fill-available;">
               <div class="skill-tube">
                 <div class="skill-fill {{ language[0] }}" data='{"init" : "{{ language[1].initDate }}", "active" : "{{ language[1].activeDate }}"}'>
 
