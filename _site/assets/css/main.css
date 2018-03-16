@@ -32,6 +32,6 @@
 
 .nav-menu-icon { font-size: 1.5em; margin: 10px 15px 10px 30px; }
 
-.skill-tube { background-color: white; border: 1px solid black; border-radius: 25px; height: 10px; width: 100%; width: -webkit-fill-available; }
+.skill-tube { background-color: white; border: 1px solid black; border-radius: 25px; height: 25px; margin-bottom: 20px; width: 100%; width: -webkit-fill-available; }
 
 .skill-fill { background: black; border-radius: 25px; color: white; display: none; height: 100%; text-align: right; width: 100%; width: -webkit-fill-available; visibility: hidden; }

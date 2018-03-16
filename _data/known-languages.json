@@ -7,7 +7,8 @@
         "initDate" : "2016-01-01T00:00:00.000",
         "activeDate" : "2016-05-01T00:00:00.000",
         "inUse" : false,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "classes" : ["ETGG4804 - Optimization Techniques"]
       }
     },
     {
@@ -17,7 +18,8 @@
         "initDate" : "2015-09-01T00:00:00.000",
         "activeDate" : "2015-12-01T00:00:00.000",
         "inUse" : false,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "classes" : ["ETEC3701 - Operating Systems 1"]
       }
     },
     {
@@ -27,7 +29,10 @@
         "initDate" : "2014-01-01T00:00:00.000",
         "activeDate" : "2016-05-01T00:00:00.000",
         "inUse" : false,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "tech" : [],
+        "classes" : ["ETEC1101 - Structured Programming",
+                    "ETGG4803 - Artificial Intelligence"]
       }
     },
     {
@@ -37,7 +42,14 @@
         "initDate" : "2015-09-01T00:00:00.000",
         "activeDate" : "2017-06-01T00:00:00.000",
         "inUse" : false,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "tech" : ["Unreal Engine 4", "Unity", "Wireshark", "Qt"],
+        "classes" : ["ETGG3801 - Realtime Interactive Programming 1",
+                    "ETGG3802 - Realtime Interactive Programming 2",
+                    "ETGG4802 - Digital Simulation Design Lab 2",
+                    "ETGG4803 - Artificial Intelligence",
+                    "ETGG4804 - Optimization Techniques",
+                    "ETGG4805 - Perspect Interactive Simulation (Network Security)"]
       }
     },
     {
@@ -47,7 +59,9 @@
         "initDate" : "2016-01-01T00:00:00.000",
         "activeDate" : "2016-05-01T00:00:00.000",
         "inUse" : false,
-        "formallyLearned" : false
+        "formallyLearned" : false,
+        "tech" : [],
+        "classes" : ["ETGG4803 - Artificial Intelligence"]
       }
     },
     {
@@ -57,7 +71,12 @@
         "initDate" : "2014-01-01T00:00:00.000",
         "activeDate" : "2017-06-01T00:00:00.000",
         "inUse" : false,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "tech" : [],
+        "classes" : ["ETEC2101 - Data Structures",
+                    "ETEC3401 - Algorithms",
+                    "ETEC3702 - Operating Systems 2",
+                    "ETGG4803 - Artificial Intelligence"]
       }
     },
     {
@@ -67,7 +86,8 @@
         "initDate" : "2015-09-01T00:00:00.000",
         "activeDate" : "2015-12-01T00:00:00.000",
         "inUse" : false,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "classes" : ["ETEC2601 - Database Systems"]
       }
     },
     {
@@ -77,7 +97,13 @@
         "initDate" : "2014-01-01T00:00:00.000",
         "activeDate" : "",
         "inUse" : true,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "tech" : ["Node.js", "Gulp", "ThreeJS", "jQuery", "AJAX", "Bootstrap", "Slick", "ScrollMagic", "Greensock", "PhoneGap", "Electron"],
+        "classes" : ["ETGG2801 - Computer Graphics 1",
+                    "ETGG2802 - Computer Graphics 2",
+                    "ETEC3201 - Networking and Communication",
+                    "ETGG4803 - Artificial Intelligence",
+                    "BUIS2350 - JavaScript Programming"]
       }
     },
     {
@@ -87,7 +113,8 @@
         "initDate" : "2015-09-01T00:00:00.000",
         "activeDate" : "2015-12-01T00:00:00.000",
         "inUse" : false,
-        "formallyLearned" : false
+        "formallyLearned" : false,
+        "classes" : ["ETGG4803 - Artificial Intelligence"]
       }
     },
     {
@@ -97,7 +124,10 @@
         "initDate" : "2016-01-01T00:00:00.000",
         "activeDate" : "",
         "inUse" : true,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "classes" : ["ETCO1150 - HTML Programming/Web Page Design",
+                    "ETEC4401 - Compiler Design",
+                    "BUIS2350 - JavaScript Programming"]
       }
     },
     {
@@ -107,7 +137,9 @@
         "initDate" : "2016-01-01T00:00:00.000",
         "activeDate" : "",
         "inUse" : true,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "classes" : ["ETCO1150 - HTML Programming/Web Page Design",
+                    "BUIS2350 - JavaScript Programming"]
       }
     },
     {
@@ -147,7 +179,14 @@
         "initDate" : "2016-01-01T00:00:00.000",
         "activeDate" : "",
         "inUse" : true,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "tech" : ["Qt"],
+        "classes" : ["ETEC2104 - Object Oriented Programming and Software Engineering",
+                    "ETEC2601 - Database Systems",
+                    "ETEC3201 - Networking and Communication",
+                    "ETEC3402 - Automata and Formal Languages",
+                    "ETEC4401 - Compiler Design",
+                    "ETGG4803 - Artificial Intelligence"]
       }
     },
     {
@@ -157,7 +196,9 @@
         "initDate" : "2017-01-01T00:00:00.000",
         "activeDate" : "",
         "inUse" : true,
-        "formallyLearned" : false
+        "formallyLearned" : false,
+        "tech" : [],
+        "classes" : ["ETEC4401 - Compiler Design"]
       }
     },
     {
@@ -167,7 +208,12 @@
         "initDate" : "2013-09-01T00:00:00.000",
         "activeDate" : "",
         "inUse" : true,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "tech" : ["lxml"],
+        "classes" : ["ETGG1801 - Game Programming Foundations 1",
+                    "ETGG1802 - Game Programming Foundations 2",
+                    "ETGG1803 - Concepts of 3D Graphics & Math",
+                    "ETGG4803 - Artificial Intelligence"]
       }
     },
     {
@@ -177,7 +223,8 @@
         "initDate" : "2015-09-01T00:00:00.000",
         "activeDate" : "2015-12-01T00:00:00.000",
         "inUse" : false,
-        "formallyLearned" : true
+        "formallyLearned" : true,
+        "classes" : ["ETEC2601 - Database Systems"]
       }
     }]
 }

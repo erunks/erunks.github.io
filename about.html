@@ -14,13 +14,13 @@ title: About Me
       <h1>About...</h1>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-6 col-lg-6">
+          <div class="col-sm-12 col-md-8">
             <h2>Known Languages:</h2>
             <p><i>*The fill percentage of each bar represents the time I've spent during my career as a programmer using the specific language.</i><p>
             <br/>
             <div class="d-block">
               {% assign sorted = site.data.known-languages.languages | sort: 'name' %}
-              <select class="form-control">
+              <select class="form-control" style="margin-bottom: 20px;">
                 {% for language in sorted %}
                   <option value="{{ language.name }}">{{ language.content.name }}</option>
                 {% endfor %}
@@ -32,29 +32,29 @@ title: About Me
                   <div class="language-details {{ language.name }} hidden">
                 {% endif %}
                   <div class="row">
-                    <div class="col-xs-6 col-lg-6" style="margin: auto 10px;">
-                      <span>
+                    <div class="col-6">
+                      <p>
                         {% if language.content.inUse %}
                           <i class="far fa-check-square"></i>
                         {% else %}
                           <i class="far fa-square"></i>
                         {% endif %}
                         Currently in Use
-                      </span>
+                      </p>
                     </div>
-                    <div class="col-xs-6 col-lg-6" style="margin: auto 10px;">
-                      <span>
+                    <div class="col-6">
+                      <p>
                         {% if language.content.formallyLearned %}
                           <i class="far fa-check-square"></i>
                         {% else %}
                           <i class="far fa-square"></i>
                         {% endif %}
                         Taught in School
-                      </span>
+                      </p>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-xs-12 col-lg-12" style="width: 100%; width: -webkit-fill-available;">
+                    <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
                       <div class="skill-tube">
                         <div class="skill-fill {{ language.name }}" data='{"init" : "{{ language.content.initDate }}", "active" : "{{ language.content.activeDate }}"}'>
 
@@ -62,10 +62,36 @@ title: About Me
                       </div>
                     </div>
                   </div>
+                  {% if language.content.tech or language.content.classes %}
+                    <div class="row">
+                      {% if language.content.classes  %}
+                        <div class="col-6">
+                          <h3> Classes Used In: </h3>
+                          {% assign classList = language.content.classes | sort %}
+                          <ul>
+                            {% for class in classList %}
+                              <li> {{ class }} </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      {% endif %}
+                      {% if language.content.tech %}
+                        <div class="col-6">
+                          <h3> Technologies Used: </h3>
+                          {% assign technologies = language.content.tech | sort %}
+                          <ul>
+                            {% for tech in technologies %}
+                              <li> {{ tech }} </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
                 </div>
               {% endfor %}
             </div>
-            <div class="d-none">
+            <!-- <div class="d-none">
               {% assign sorted = site.data.known-languages.languages | sort: 'name' %}
               {% for language in sorted %}
                 <div class="container-fluid">
@@ -110,9 +136,9 @@ title: About Me
                   <hr/>
                 {% endunless %}
               {% endfor %}
-            </div>
+            <!-- </div> -->
           </div>
-          <div class="col-xs-6 col-lg-6">
+          <div class="col-sm-12 col-md-4">
             <h2>Languages that have caught my interest:</h2>
             <div class="table-responsive">
               <table class="table table-bordered table-striped table-sm">
