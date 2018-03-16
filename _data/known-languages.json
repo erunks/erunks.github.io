@@ -180,7 +180,7 @@
         "activeDate" : "",
         "inUse" : true,
         "formallyLearned" : true,
-        "tech" : ["Qt"],
+        "tech" : ["Qt","Jekyll","Liquid","Ruby2D"],
         "classes" : ["ETEC2104 - Object Oriented Programming and Software Engineering",
                     "ETEC2601 - Database Systems",
                     "ETEC3201 - Networking and Communication",

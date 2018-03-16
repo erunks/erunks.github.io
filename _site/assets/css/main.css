@@ -28,6 +28,9 @@
 
 .overlay-screen { background-color: rgba(130, 130, 130, 0.5); height: 100%; height: -webkit-fill-available; left: 0; opacity: 1; position: fixed; top: 0; width: 100%; width: -webkit-fill-available; z-index: 9; }
 
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.truncate:hover { overflow: visible; white-space: normal; }
+
 .nav-menu { background: white; border: 1px solid black; box-shadow: 5px 5px rgba(0, 0, 0, 0.5); height: 100%; height: -webkit-fill-available; float: left; left: 0; margin-left: 5px; padding: 10px 20px 0; position: fixed; top: 0; z-index: 10; }
 
 .nav-menu-icon { font-size: 1.5em; margin: 10px 15px 10px 30px; }

@@ -17,3 +17,14 @@
   width: -webkit-fill-available;
   z-index: 9;
 };
+
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover{
+    overflow: visible;
+    white-space: normal;
+  }
+}
