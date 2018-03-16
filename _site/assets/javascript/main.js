@@ -1,3 +1,8 @@
+/* Calcuates the percentage of the
+bar fill based on the percentage of
+use (of a particular language) over
+the time of my life having
+programming knowledge */
 function calculateBarFill(){
   $('.skill-fill').each(function(i,e){
     // console.log(i,e);
@@ -13,6 +18,23 @@ function calculateBarFill(){
     e.setAttribute("style","width: "+percentage+"%; display: block; visibility: visible;");
   });
 };
+
+/* Hides/Shows the language details of
+the selected language from the select
+form input on mobile scaled devices */
+function selectLanguageDetails(){
+  $('select').on('change',function(event){
+	// console.log(event.target.value);
+	$('.language-details').each(function(i,e){
+		if(!e.classList.contains('hidden')){
+			e.classList.add("hidden");
+        }
+		else if(e.classList.contains('hidden') && e.classList.contains(event.target.value)){
+			e.classList.remove("hidden");
+        }
+    });
+  });
+}
 
 /* Does exactly what the function name says,
 also handles all the animation transitions
