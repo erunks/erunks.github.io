@@ -65,7 +65,7 @@ title: About Me
                       {% if language.content.classes  %}
                         <div class="col-6">
                           <h3> Classes Used In: </h3>
-                          {% assign classList = language.content.classes | sort:"downcase" %}
+                          {% assign classList = language.content.classes %}
                           <ul style="list-style-type: none;">
                             {% for class in classList %}
                               <li class="truncate"> {{ class }} </li>
@@ -76,7 +76,7 @@ title: About Me
                       {% if language.content.tech %}
                         <div class="col-6">
                           <h3> Technologies Used: </h3>
-                          {% assign technologies = language.content.tech | sort:"downcase" %}
+                          {% assign technologies = language.content.tech %}
                           <ul style="list-style-type: none;">
                             {% for tech in technologies %}
                               <li class="truncate"> {{ tech }} </li>
