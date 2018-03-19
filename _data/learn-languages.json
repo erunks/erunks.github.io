@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "cobol" : {
     "name" : "COBOL",
@@ -64,3 +65,89 @@
     "dabbled" : false
   }
 }
+=======
+{
+  "languages" : [
+    {
+      "lower" : "cobol",
+      "name" : "COBOL",
+      "dabbled" : false
+    },
+    {
+      "lower" : "fortran",
+      "name" : "Fortran",
+      "dabbled" : false
+    },
+    {
+      "lower" : "lisp",
+      "name" : "Lisp",
+      "dabbled" : false
+    },
+    {
+      "lower" : "elixir",
+      "name" : "Elixir",
+      "dabbled" : true
+    },
+    {
+      "lower" : "clojure",
+      "name" : "Clojure",
+      "dabbled" : false
+    },
+    {
+      "lower" : "rust",
+      "name" : "Rust",
+      "dabbled" : false
+    },
+    {
+      "lower" : "r",
+      "name" : "R",
+      "dabbled" : true
+    },
+    {
+      "lower" : "lua",
+      "name" : "Lua",
+      "dabbled" : true
+    },
+    {
+      "lower" : "swift",
+      "name" : "Swift",
+      "dabbled" : false
+    },
+    {
+      "lower" : "basic256",
+      "name" : "Basic-256",
+      "dabbled" : true
+    },
+    {
+      "lower" : "nim",
+      "name" : "Nim",
+      "dabbled" : false
+    },
+    {
+      "lower" : "go",
+      "name" : "Go",
+      "dabbled" : true
+    },
+    {
+      "lower" : "haskell",
+      "name" : "Haskell",
+      "dabbled" : false
+    },
+    {
+      "lower" : "prolog",
+      "name" : "Prolog",
+      "dabbled" : false
+    },
+    {
+      "lower" : "pascal",
+      "name" : "Pascal",
+      "dabbled" : false
+    },
+    {
+      "lower" : "ocaml",
+      "name" : "OCaml",
+      "dabbled" : false
+    }
+  ]
+}
+>>>>>>> b665989d5bda230ef6fed37853e9693309b41022

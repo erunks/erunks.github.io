@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .skill-tube {
   background-color: white;
   border: 1px solid black;
@@ -20,3 +21,28 @@
   width: -webkit-fill-available;
   visibility: hidden;
 }
+=======
+.skill-tube {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+  height: 25px;
+  margin-bottom: 20px;
+  width: 100%;
+  width: -webkit-fill-available;
+}
+
+.skill-fill {
+  background: black;
+  border-radius: 25px;
+  color: white;
+  display: none;
+  height: 100%;
+  // line-height: 40px;
+  // padding-right: 20px;
+  text-align: right;
+  width: 100%;
+  width: -webkit-fill-available;
+  visibility: hidden;
+}
+>>>>>>> b665989d5bda230ef6fed37853e9693309b41022
