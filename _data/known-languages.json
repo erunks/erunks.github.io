@@ -1,133 +1,3 @@
-<<<<<<< HEAD
-{
-  "arm" : {
-    "name" : "ARM",
-    "initDate" : "2016-01-01T00:00:00.000",
-    "activeDate" : "2016-05-01T00:00:00.000",
-    "inUse" : false,
-    "formallyLearned" : true
-  },
-  "intelx86" : {
-    "name" : "IntelX86",
-    "initDate" : "2015-09-01T00:00:00.000",
-    "activeDate" : "2015-12-01T00:00:00.000",
-    "inUse" : false,
-    "formallyLearned" : true
-  },
-  "c" : {
-    "name" : "C",
-    "initDate" : "2014-01-01T00:00:00.000",
-    "activeDate" : "2016-05-01T00:00:00.000",
-    "inUse" : false,
-    "formallyLearned" : true
-  },
-  "cpp" : {
-    "name" : "C++",
-    "initDate" : "2015-09-01T00:00:00.000",
-    "activeDate" : "2017-06-01T00:00:00.000",
-    "inUse" : false,
-    "formallyLearned" : true
-  },
-  "csharp" : {
-    "name" : "C#",
-    "initDate" : "2016-01-01T00:00:00.000",
-    "activeDate" : "2016-05-01T00:00:00.000",
-    "inUse" : false,
-    "formallyLearned" : false
-  },
-  "java" : {
-    "name" : "Java",
-    "initDate" : "2014-01-01T00:00:00.000",
-    "activeDate" : "2017-06-01T00:00:00.000",
-    "inUse" : false,
-    "formallyLearned" : true
-  },
-  "mathpiper" : {
-    "name" : "MathPiper",
-    "initDate" : "2015-09-01T00:00:00.000",
-    "activeDate" : "2015-12-01T00:00:00.000",
-    "inUse" : false,
-    "formallyLearned" : true
-  },
-  "javascript" : {
-    "name" : "JavaScript",
-    "initDate" : "2014-01-01T00:00:00.000",
-    "activeDate" : "",
-    "inUse" : true,
-    "formallyLearned" : true
-  },
-  "typescript" : {
-    "name" : "TypeScript",
-    "initDate" : "2015-09-01T00:00:00.000",
-    "activeDate" : "2015-12-01T00:00:00.000",
-    "inUse" : false,
-    "formallyLearned" : false
-  },
-  "html" : {
-    "name" : "HTML",
-    "initDate" : "2016-01-01T00:00:00.000",
-    "activeDate" : "",
-    "inUse" : true,
-    "formallyLearned" : true
-  },
-  "css" : {
-    "name" : "CSS",
-    "initDate" : "2016-01-01T00:00:00.000",
-    "activeDate" : "",
-    "inUse" : true,
-    "formallyLearned" : true
-  },
-  "less" : {
-    "name" : "LESS",
-    "initDate" : "2017-10-01T00:00:00.000",
-    "activeDate" : "",
-    "inUse" : true,
-    "formallyLearned" : false
-  },
-  "sass" : {
-    "name" : "Sass",
-    "initDate" : "2018-03-12T00:00:00.000",
-    "activeDate" : "",
-    "inUse" : true,
-    "formallyLearned" : false
-  },
-  "php" : {
-    "name" : "PHP",
-    "initDate" : "2018-01-01T00:00:00.000",
-    "activeDate" : "",
-    "inUse" : true,
-    "formallyLearned" : false
-  },
-  "ruby" : {
-    "name" : "Ruby",
-    "initDate" : "2016-01-01T00:00:00.000",
-    "activeDate" : "",
-    "inUse" : true,
-    "formallyLearned" : true
-  },
-  "crystal" : {
-    "name" : "Crystal",
-    "initDate" : "2017-01-01T00:00:00.000",
-    "activeDate" : "",
-    "inUse" : true,
-    "formallyLearned" : false
-  },
-  "python" : {
-    "name" : "Python",
-    "initDate" : "2013-09-01T00:00:00.000",
-    "activeDate" : "",
-    "inUse" : true,
-    "formallyLearned" : true
-  },
-  "sql" : {
-    "name" : "SQL",
-    "initDate" : "2015-09-01T00:00:00.000",
-    "activeDate" : "2015-12-01T00:00:00.000",
-    "inUse" : false,
-    "formallyLearned" : true
-  }
-}
-=======
 {
   "languages" : [
     {
@@ -160,7 +30,7 @@
         "activeDate" : "2016-05-01T00:00:00.000",
         "inUse" : false,
         "formallyLearned" : true,
-        "tech" : [],
+        "tech" : ["sigil"],
         "classes" : ["ETEC1101 - Structured Programming",
                     "ETGG4803 - Artificial Intelligence"]
       }
@@ -173,7 +43,7 @@
         "activeDate" : "2017-06-01T00:00:00.000",
         "inUse" : false,
         "formallyLearned" : true,
-        "tech" : ["Unreal Engine 4", "Unity", "Wireshark", "Qt"],
+        "tech" : ["Unreal Engine 4", "Unity", "Wireshark", "Qt","SFML"],
         "classes" : ["ETGG3801 - Realtime Interactive Programming 1",
                     "ETGG3802 - Realtime Interactive Programming 2",
                     "ETGG4802 - Digital Simulation Design Lab 2",
@@ -190,7 +60,7 @@
         "activeDate" : "2016-05-01T00:00:00.000",
         "inUse" : false,
         "formallyLearned" : false,
-        "tech" : [],
+        "tech" : ["WPF"],
         "classes" : ["ETGG4803 - Artificial Intelligence"]
       }
     },
@@ -202,7 +72,7 @@
         "activeDate" : "2017-06-01T00:00:00.000",
         "inUse" : false,
         "formallyLearned" : true,
-        "tech" : [],
+        "tech" : ["Jama"],
         "classes" : ["ETEC2101 - Data Structures",
                     "ETEC3401 - Algorithms",
                     "ETEC3702 - Operating Systems 2",
@@ -310,7 +180,7 @@
         "activeDate" : "",
         "inUse" : true,
         "formallyLearned" : true,
-        "tech" : ["Qt","Jekyll","Liquid","Ruby2D"],
+        "tech" : ["Qt","Jekyll","Liquid","Ruby2D","Nokogiri"],
         "classes" : ["ETEC2104 - Object Oriented Programming and Software Engineering",
                     "ETEC2601 - Database Systems",
                     "ETEC3201 - Networking and Communication",
@@ -327,7 +197,7 @@
         "activeDate" : "",
         "inUse" : true,
         "formallyLearned" : false,
-        "tech" : [],
+        "tech" : ["StumpyPNG"],
         "classes" : ["ETEC4401 - Compiler Design"]
       }
     },
@@ -339,7 +209,7 @@
         "activeDate" : "",
         "inUse" : true,
         "formallyLearned" : true,
-        "tech" : ["lxml"],
+        "tech" : ["lxml","python-twitter","PySVN","PasteBinAPI","numpy"],
         "classes" : ["ETGG1801 - Game Programming Foundations 1",
                     "ETGG1802 - Game Programming Foundations 2",
                     "ETGG1803 - Concepts of 3D Graphics & Math",
@@ -358,4 +228,3 @@
       }
     }]
 }
->>>>>>> b665989d5bda230ef6fed37853e9693309b41022
