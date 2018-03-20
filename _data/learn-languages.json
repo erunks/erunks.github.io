@@ -79,6 +79,11 @@
       "lower" : "ocaml",
       "name" : "OCaml",
       "dabbled" : false
+    },
+    {
+      "lower" : "kotlin",
+      "name" : "Kotlin",
+      "dabbled" : false
     }
   ]
 }
