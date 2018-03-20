@@ -209,7 +209,7 @@
         "activeDate" : "",
         "inUse" : true,
         "formallyLearned" : true,
-        "tech" : ["lxml","numpy","openpyxl","PasteBinAPI","PySVN","python-twitter"],
+        "tech" : ["lxml","numpy","openpyxl","PasteBinAPI","PIL","PySVN","python-twitter"],
         "classes" : ["ETGG1801 - Game Programming Foundations 1",
                     "ETGG1802 - Game Programming Foundations 2",
                     "ETGG1803 - Concepts of 3D Graphics & Math",
