@@ -1,0 +1,50 @@
+/* -----SLIDE----- */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+.slide-in { animation: slide-in 0.5s forwards; -webkit-animation: slide-in 0.5s forwards; }
+
+.slide-out { animation: slide-out 0.5s forwards; -webkit-animation: slide-out 0.5s forwards; }
+
+@keyframes slide-in { 0% { transform: translateX(-110%); }
+  100% { transform: translateX(0%); } }
+@-webkit-keyframes slide-in { 0% { -webkit-transform: translateX(-110%); }
+  100% { -webkit-transform: translateX(0%); } }
+@keyframes slide-out { 0% { transform: translateX(0%); }
+  100% { transform: translateX(-110%); } }
+@-webkit-keyframes slide-out { 0% { -webkit-transform: translateX(0%); }
+  100% { -webkit-transform: translateX(-110%); } }
+/* -----FADE----- */
+.fade-in { animation: fade-in 0.5s forwards; -webkit-animation: fade-in 0.5s forwards; }
+
+.fade-out { animation: fade-out 0.5s forwards; -webkit-animation: fade-out 0.5s forwards; }
+
+@keyframes fade-in { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+@-webkit-keyframes fade-in { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+@keyframes fade-out { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@-webkit-keyframes fade-out { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+.hidden { display: none; height: 0px; visibility: hidden; width: 0px; }
+
+.overlay-screen { background-color: rgba(130, 130, 130, 0.5); height: 100%; height: -webkit-fill-available; left: 0; opacity: 1; position: fixed; top: 0; width: 100%; width: -webkit-fill-available; z-index: 9; }
+
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.truncate:hover { overflow: visible; white-space: normal; }
+
+.montserrat-400 { font-family: 'Montserrat', sans-serif; font-weight: 400; }
+
+.montserrat-700 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+
+.roboto-400 { font-family: 'Roboto', sans-serif; font-weight: 400; }
+
+.roboto-700 { font-family: 'Roboto', sans-serif; font-weight: 700; }
+
+.nav-menu { background: white; border: 1px solid black; box-shadow: 5px 5px rgba(0, 0, 0, 0.5); height: 100%; height: -webkit-fill-available; float: left; left: 0; margin-left: 5px; padding: 10px 20px 0; position: fixed; top: 0; z-index: 10; }
+
+.nav-menu-icon { font-size: 1.5em; margin: 10px 15px 10px 30px; }
+
+.skill-tube { background-color: white; border: 1px solid black; border-radius: 25px; height: 25px; margin-bottom: 20px; width: 100%; width: -webkit-fill-available; }
+
+.skill-fill { background: black; border-radius: 25px; color: white; display: none; height: 100%; text-align: right; width: 100%; width: -webkit-fill-available; visibility: hidden; }
