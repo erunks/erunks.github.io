@@ -6,8 +6,8 @@
 <meta name="author" content="Edward Runkel"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-    <meta name="title" content="About Me"/>
-    <title>About Me</title>
+    <meta name="title" content="About"/>
+    <title>About</title>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" onload="window.$ = window.jQuery"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -20,35 +20,24 @@
   </head>
 
   <body style="background-color: rgba(130,130,130,0.25);">
-    <div class="row">
-      <div class="col-xs-1 nav-menu hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-block d-md-none" style="padding: 0;">
+          <a onclick="toggleNav();"><i class="nav-menu-icon fas fa-bars"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-1 nav-menu hidden">
   <div class="container">
     <div class="row">
       <div class="col-xs-11">
-        <ul>
+        <ul style="list-style-type: none;">
+          <li><a href="./index.html" alt="Home" title="Home">Home</a></li>
+          <li><a href="./about.html" alt="About" title="About">About</a></li>
+          
           
             
-              
-              
-              <li><a href="/about.html">about.html</a></li>
-            
           
-            
-              
-              
-              <li><a href="/contact.html">contact.html</a></li>
-            
-          
-            
-              
-              
-              <li><a href="/">index.html</a></li>
-            
-          
-            
-              
-              
-              <li><a href="/languages.html">languages.html</a></li>
             
           
             
@@ -56,13 +45,18 @@
             
           
             
-              
-              
-              <li><a href="/work.html">work.html</a></li>
+              <li><a href="/work.html">Experience</a></li>
             
           
             
           
+            
+              <li><a href="/languages.html">Skills</a></li>
+            
+          
+            
+          
+          <li><a href="./contact.html" alt="Contact" title="Contact">Contact</a></li>
         </ul>
       </div>
       <div class="col-xs-1">
@@ -71,29 +65,31 @@
     </div>
   </div>
 </div>
-<div class="col-1">
-  <a onclick="toggleNav();"><i class="nav-menu-icon fas fa-bars"></i></a>
-</div>
 
-      <div class="col-10">
-        <div class="container-fluid">
-          <div class="row" style="background: white; border-left: 1px solid black; border-right: 1px solid black; box-shadow: 5px 5px rgba(0,0,0,0.5); height: 100%; height: -webkit-fill-available;">
-            <div class="col-xs-12 col-lg-12" style="width: 100%; width: -webkit-fill-available;">
-              <div class="container-fluid">
+      </div>
+      <div class="row">
+        <div class="col-md-1 d-none d-md-block" style="padding: 0; padding-left: 0.75%;">
+          <a onclick="toggleNav();" style="float: left;"><i class="nav-menu-icon fas fa-bars"></i></a>
+        </div>
+        <div class="col-sm-12 col-md-11" style="padding: 0;">
+          <div class="container-fluid">
+            <div class="row" style="background: white; border: 1px solid black; box-shadow: 5px 5px rgba(0,0,0,0.5); height: 100%; height: fit-content; min-height: -webkit-fill-available;">
+              <div class="col-xs-12 col-lg-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="container-fluid">
   <div class="row">
     <div class="col-12">
-      <h1>About...</h1>
+      <h1 style="border-bottom: 1px solid black; margin-top: 1rem;">About</h1>
     </div>
   </div>
 </div>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-lg-12 overlay-screen hidden">
+      <div class="row">
+        <div class="col-xs-12 col-lg-12 overlay-screen hidden"></div>
       </div>
     </div>
   </body>

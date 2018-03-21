@@ -20,35 +20,24 @@
   </head>
 
   <body style="background-color: rgba(130,130,130,0.25);">
-    <div class="row">
-      <div class="col-xs-1 nav-menu hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-block d-md-none" style="padding: 0;">
+          <a onclick="toggleNav();"><i class="nav-menu-icon fas fa-bars"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-1 nav-menu hidden">
   <div class="container">
     <div class="row">
       <div class="col-xs-11">
-        <ul>
+        <ul style="list-style-type: none;">
+          <li><a href="./index.html" alt="Home" title="Home">Home</a></li>
+          <li><a href="./about.html" alt="About" title="About">About</a></li>
+          
           
             
-              
-              
-              <li><a href="/about.html">about.html</a></li>
-            
           
-            
-              
-              
-              <li><a href="/contact.html">contact.html</a></li>
-            
-          
-            
-              
-              
-              <li><a href="/">index.html</a></li>
-            
-          
-            
-              
-              
-              <li><a href="/languages.html">languages.html</a></li>
             
           
             
@@ -56,13 +45,18 @@
             
           
             
-              
-              
-              <li><a href="/work.html">work.html</a></li>
+              <li><a href="/work.html">Experience</a></li>
             
           
             
           
+            
+              <li><a href="/languages.html">Skills</a></li>
+            
+          
+            
+          
+          <li><a href="./contact.html" alt="Contact" title="Contact">Contact</a></li>
         </ul>
       </div>
       <div class="col-xs-1">
@@ -71,1261 +65,1262 @@
     </div>
   </div>
 </div>
-<div class="col-1">
-  <a onclick="toggleNav();"><i class="nav-menu-icon fas fa-bars"></i></a>
-</div>
 
-      <div class="col-10">
-        <div class="container-fluid">
-          <div class="row" style="background: white; border-left: 1px solid black; border-right: 1px solid black; box-shadow: 5px 5px rgba(0,0,0,0.5); height: 100%; height: -webkit-fill-available;">
-            <div class="col-xs-12 col-lg-12" style="width: 100%; width: -webkit-fill-available;">
-              <script>
+      </div>
+      <div class="row">
+        <div class="col-md-1 d-none d-md-block" style="padding: 0; padding-left: 0.75%;">
+          <a onclick="toggleNav();" style="float: left;"><i class="nav-menu-icon fas fa-bars"></i></a>
+        </div>
+        <div class="col-sm-12 col-md-11" style="padding: 0;">
+          <div class="container-fluid">
+            <div class="row" style="background: white; border: 1px solid black; box-shadow: 5px 5px rgba(0,0,0,0.5); height: 100%; height: fit-content; min-height: -webkit-fill-available;">
+              <div class="col-xs-12 col-lg-12" style="width: 100%; width: -webkit-fill-available;">
+                <script>
   $(function(){
     calculateBarFill();
     selectLanguageDetails();
   });
 </script>
-<div class="container-fluid">
+<div class="row">
+  <div class="col-xs-12 col-lg-12">
+    <h1 style="border-bottom: 1px solid black; margin-top: 1rem;">Skills</h1>
+  </div>
+</div>
   <div class="row">
-    <div class="col-xs-12 col-lg-12">
-      <h1>Skills</h1>
+    <div class="col-12">
+      <p>
+        While Crystal, Ruby, &amp; JavaScript are the languages I am the most passionate about and have the most fun with,
+        I've had exposure to a wide array of languages. Be it compiled or interpreted, I've likely heard of the language.
+      </p>
     </div>
   </div>
-    <div class="row">
-      <div class="col-12">
-        <p>
-          While Crystal, Ruby, &amp; JavaScript are the languages I am the most passionate about and have the most fun with,
-          I've had exposure to a wide array of languages. Be it compiled or interpreted, I've likely heard of the language.
-        </p>
+  <hr class="d-block d-md-none"/>
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <h2>Known Languages:</h2>
+      <p><i>*The fill percentage of each bar represents the time I've spent during my career as a programmer using the specific language.</i><p>
+      <div style="margin-bottom: 2rem; margin-top: 2rem;">
+        
+        <select class="form-control" style="margin-bottom: 20px;">
+          
+            <option value="arm">ARM</option>
+          
+            <option value="c">C</option>
+          
+            <option value="cpp">C++</option>
+          
+            <option value="crystal">Crystal</option>
+          
+            <option value="csharp">C#</option>
+          
+            <option value="css">CSS</option>
+          
+            <option value="html">HTML</option>
+          
+            <option value="intelx86">IntelX86</option>
+          
+            <option value="java">Java</option>
+          
+            <option value="javascript">JavaScript</option>
+          
+            <option value="less">LESS</option>
+          
+            <option value="mathpiper">MathPiper</option>
+          
+            <option value="php">PHP</option>
+          
+            <option value="python">Python</option>
+          
+            <option value="ruby">Ruby</option>
+          
+            <option value="sass">Sass</option>
+          
+            <option value="sql">SQL</option>
+          
+            <option value="typescript">TypeScript</option>
+          
+        </select>
+        
+          
+            <div class="language-details arm">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill arm" data='{"init" : "2016-01-01T00:00:00.000", "active" : "2016-05-01T00:00:00.000"}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETGG4804 - Optimization Techniques </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details c hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill c" data='{"init" : "2014-01-01T00:00:00.000", "active" : "2016-05-01T00:00:00.000"}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETEC1101 - Structured Programming </li>
+                      
+                        <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+                  <div class="col-6">
+                    <h3> Technologies Used: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> sigil </li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details cpp hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill cpp" data='{"init" : "2015-09-01T00:00:00.000", "active" : "2017-06-01T00:00:00.000"}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETGG3801 - Realtime Interactive Programming 1 </li>
+                      
+                        <li class="truncate"> ETGG3802 - Realtime Interactive Programming 2 </li>
+                      
+                        <li class="truncate"> ETGG4802 - Digital Simulation Design Lab 2 </li>
+                      
+                        <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
+                      
+                        <li class="truncate"> ETGG4804 - Optimization Techniques </li>
+                      
+                        <li class="truncate"> ETGG4805 - Perspect Interactive Simulation (Network Security) </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+                  <div class="col-6">
+                    <h3> Technologies Used: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> Qt </li>
+                      
+                        <li class="truncate"> SFML </li>
+                      
+                        <li class="truncate"> Unity </li>
+                      
+                        <li class="truncate"> Unreal Engine 4 </li>
+                      
+                        <li class="truncate"> Wireshark </li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details crystal hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill crystal" data='{"init" : "2017-01-01T00:00:00.000", "active" : ""}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETEC4401 - Compiler Design </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+                  <div class="col-6">
+                    <h3> Technologies Used: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> StumpyPNG </li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details csharp hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill csharp" data='{"init" : "2016-01-01T00:00:00.000", "active" : "2016-05-01T00:00:00.000"}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+                  <div class="col-6">
+                    <h3> Technologies Used: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> WPF </li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details css hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill css" data='{"init" : "2016-01-01T00:00:00.000", "active" : ""}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETCO1150 - HTML Programming/Web Page Design </li>
+                      
+                        <li class="truncate"> BUIS2350 - JavaScript Programming </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details html hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill html" data='{"init" : "2016-01-01T00:00:00.000", "active" : ""}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETCO1150 - HTML Programming/Web Page Design </li>
+                      
+                        <li class="truncate"> ETEC4401 - Compiler Design </li>
+                      
+                        <li class="truncate"> BUIS2350 - JavaScript Programming </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details intelx86 hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill intelx86" data='{"init" : "2015-09-01T00:00:00.000", "active" : "2015-12-01T00:00:00.000"}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETEC3701 - Operating Systems 1 </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details java hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill java" data='{"init" : "2014-01-01T00:00:00.000", "active" : "2017-06-01T00:00:00.000"}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETEC2101 - Data Structures </li>
+                      
+                        <li class="truncate"> ETEC3401 - Algorithms </li>
+                      
+                        <li class="truncate"> ETEC3702 - Operating Systems 2 </li>
+                      
+                        <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+                  <div class="col-6">
+                    <h3> Technologies Used: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> Jama </li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details javascript hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill javascript" data='{"init" : "2014-01-01T00:00:00.000", "active" : ""}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETGG2801 - Computer Graphics 1 </li>
+                      
+                        <li class="truncate"> ETGG2802 - Computer Graphics 2 </li>
+                      
+                        <li class="truncate"> ETEC3201 - Networking and Communication </li>
+                      
+                        <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
+                      
+                        <li class="truncate"> BUIS2350 - JavaScript Programming </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+                  <div class="col-6">
+                    <h3> Technologies Used: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> AJAX </li>
+                      
+                        <li class="truncate"> Bootstrap </li>
+                      
+                        <li class="truncate"> Electron </li>
+                      
+                        <li class="truncate"> Greensock </li>
+                      
+                        <li class="truncate"> Gulp </li>
+                      
+                        <li class="truncate"> jQuery </li>
+                      
+                        <li class="truncate"> Node.js </li>
+                      
+                        <li class="truncate"> PhoneGap </li>
+                      
+                        <li class="truncate"> ScrollMagic </li>
+                      
+                        <li class="truncate"> Slick </li>
+                      
+                        <li class="truncate"> ThreeJS </li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details less hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill less" data='{"init" : "2017-10-01T00:00:00.000", "active" : ""}'></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        
+          
+            <div class="language-details mathpiper hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill mathpiper" data='{"init" : "2015-09-01T00:00:00.000", "active" : "2015-12-01T00:00:00.000"}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETEC2601 - Database Systems </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details php hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill php" data='{"init" : "2018-01-01T00:00:00.000", "active" : ""}'></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        
+          
+            <div class="language-details python hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill python" data='{"init" : "2013-09-01T00:00:00.000", "active" : ""}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETGG1801 - Game Programming Foundations 1 </li>
+                      
+                        <li class="truncate"> ETGG1802 - Game Programming Foundations 2 </li>
+                      
+                        <li class="truncate"> ETGG1803 - Concepts of 3D Graphics & Math </li>
+                      
+                        <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+                  <div class="col-6">
+                    <h3> Technologies Used: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> lxml </li>
+                      
+                        <li class="truncate"> numpy </li>
+                      
+                        <li class="truncate"> openpyxl </li>
+                      
+                        <li class="truncate"> PasteBinAPI </li>
+                      
+                        <li class="truncate"> PIL </li>
+                      
+                        <li class="truncate"> PySVN </li>
+                      
+                        <li class="truncate"> python-twitter </li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details ruby hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill ruby" data='{"init" : "2016-01-01T00:00:00.000", "active" : ""}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETEC2104 - Object Oriented Programming and Software Engineering </li>
+                      
+                        <li class="truncate"> ETEC2601 - Database Systems </li>
+                      
+                        <li class="truncate"> ETEC3201 - Networking and Communication </li>
+                      
+                        <li class="truncate"> ETEC3402 - Automata and Formal Languages </li>
+                      
+                        <li class="truncate"> ETEC4401 - Compiler Design </li>
+                      
+                        <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+                  <div class="col-6">
+                    <h3> Technologies Used: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> Liquid </li>
+                      
+                        <li class="truncate"> Jekyll </li>
+                      
+                        <li class="truncate"> Nokogiri </li>
+                      
+                        <li class="truncate"> Qt </li>
+                      
+                        <li class="truncate"> Ruby2D </li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details sass hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill sass" data='{"init" : "2018-03-12T00:00:00.000", "active" : ""}'></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        
+          
+            <div class="language-details sql hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill sql" data='{"init" : "2015-09-01T00:00:00.000", "active" : "2015-12-01T00:00:00.000"}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETEC2601 - Database Systems </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+              </div>
+            
+          </div>
+        
+          
+            <div class="language-details typescript hidden">
+          
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Currently in Use
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  
+                    <i class="far fa-square"></i>
+                  
+                  Taught in School
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
+                <div class="skill-tube">
+                  <div class="skill-fill typescript" data='{"init" : "2015-09-01T00:00:00.000", "active" : "2015-12-01T00:00:00.000"}'></div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+                
+                  <div class="col-6">
+                    <h3> Classes Used In: </h3>
+                    
+                    <ul style="list-style-type: none;">
+                      
+                        <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
+                      
+                    </ul>
+                  </div>
+                
+                
+              </div>
+            
+          </div>
+        
       </div>
+      <hr class="d-block d-md-none"/>
     </div>
-    <div class="row">
-      <div class="col-sm-12 col-md-8">
-        <h2>Known Languages:</h2>
-        <p><i>*The fill percentage of each bar represents the time I've spent during my career as a programmer using the specific language.</i><p>
-        <br/>
-        <div class="d-block">
-          
-          <select class="form-control" style="margin-bottom: 20px;">
+    <div class="col-sm-12 col-md-4">
+      <h2>Interested:</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-sm">
+          <thead>
+            <tr>
+              <th>
+                Language
+              </th>
+              <th>
+                Dabbled?
+              </th>
+            </tr>
+          </thead>
+          <tbody>
             
-              <option value="arm">ARM</option>
             
-              <option value="c">C</option>
-            
-              <option value="cpp">C++</option>
-            
-              <option value="crystal">Crystal</option>
-            
-              <option value="csharp">C#</option>
-            
-              <option value="css">CSS</option>
-            
-              <option value="html">HTML</option>
-            
-              <option value="intelx86">IntelX86</option>
-            
-              <option value="java">Java</option>
-            
-              <option value="javascript">JavaScript</option>
-            
-              <option value="less">LESS</option>
-            
-              <option value="mathpiper">MathPiper</option>
-            
-              <option value="php">PHP</option>
-            
-              <option value="python">Python</option>
-            
-              <option value="ruby">Ruby</option>
-            
-              <option value="sass">Sass</option>
-            
-              <option value="sql">SQL</option>
-            
-              <option value="typescript">TypeScript</option>
-            
-          </select>
-          
-            
-              <div class="language-details arm">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill arm" data='{"init" : "2016-01-01T00:00:00.000", "active" : "2016-05-01T00:00:00.000"}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETGG4804 - Optimization Techniques </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details c hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill c" data='{"init" : "2014-01-01T00:00:00.000", "active" : "2016-05-01T00:00:00.000"}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETEC1101 - Structured Programming </li>
-                        
-                          <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                    <div class="col-6">
-                      <h3> Technologies Used: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> sigil </li>
-                        
-                      </ul>
-                    </div>
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details cpp hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill cpp" data='{"init" : "2015-09-01T00:00:00.000", "active" : "2017-06-01T00:00:00.000"}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETGG3801 - Realtime Interactive Programming 1 </li>
-                        
-                          <li class="truncate"> ETGG3802 - Realtime Interactive Programming 2 </li>
-                        
-                          <li class="truncate"> ETGG4802 - Digital Simulation Design Lab 2 </li>
-                        
-                          <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
-                        
-                          <li class="truncate"> ETGG4804 - Optimization Techniques </li>
-                        
-                          <li class="truncate"> ETGG4805 - Perspect Interactive Simulation (Network Security) </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                    <div class="col-6">
-                      <h3> Technologies Used: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> Qt </li>
-                        
-                          <li class="truncate"> SFML </li>
-                        
-                          <li class="truncate"> Unity </li>
-                        
-                          <li class="truncate"> Unreal Engine 4 </li>
-                        
-                          <li class="truncate"> Wireshark </li>
-                        
-                      </ul>
-                    </div>
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details crystal hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill crystal" data='{"init" : "2017-01-01T00:00:00.000", "active" : ""}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETEC4401 - Compiler Design </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                    <div class="col-6">
-                      <h3> Technologies Used: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> StumpyPNG </li>
-                        
-                      </ul>
-                    </div>
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details csharp hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill csharp" data='{"init" : "2016-01-01T00:00:00.000", "active" : "2016-05-01T00:00:00.000"}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                    <div class="col-6">
-                      <h3> Technologies Used: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> WPF </li>
-                        
-                      </ul>
-                    </div>
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details css hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill css" data='{"init" : "2016-01-01T00:00:00.000", "active" : ""}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETCO1150 - HTML Programming/Web Page Design </li>
-                        
-                          <li class="truncate"> BUIS2350 - JavaScript Programming </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details html hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill html" data='{"init" : "2016-01-01T00:00:00.000", "active" : ""}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETCO1150 - HTML Programming/Web Page Design </li>
-                        
-                          <li class="truncate"> ETEC4401 - Compiler Design </li>
-                        
-                          <li class="truncate"> BUIS2350 - JavaScript Programming </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details intelx86 hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill intelx86" data='{"init" : "2015-09-01T00:00:00.000", "active" : "2015-12-01T00:00:00.000"}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETEC3701 - Operating Systems 1 </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details java hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill java" data='{"init" : "2014-01-01T00:00:00.000", "active" : "2017-06-01T00:00:00.000"}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETEC2101 - Data Structures </li>
-                        
-                          <li class="truncate"> ETEC3401 - Algorithms </li>
-                        
-                          <li class="truncate"> ETEC3702 - Operating Systems 2 </li>
-                        
-                          <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                    <div class="col-6">
-                      <h3> Technologies Used: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> Jama </li>
-                        
-                      </ul>
-                    </div>
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details javascript hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill javascript" data='{"init" : "2014-01-01T00:00:00.000", "active" : ""}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETGG2801 - Computer Graphics 1 </li>
-                        
-                          <li class="truncate"> ETGG2802 - Computer Graphics 2 </li>
-                        
-                          <li class="truncate"> ETEC3201 - Networking and Communication </li>
-                        
-                          <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
-                        
-                          <li class="truncate"> BUIS2350 - JavaScript Programming </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                    <div class="col-6">
-                      <h3> Technologies Used: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> AJAX </li>
-                        
-                          <li class="truncate"> Bootstrap </li>
-                        
-                          <li class="truncate"> Electron </li>
-                        
-                          <li class="truncate"> Greensock </li>
-                        
-                          <li class="truncate"> Gulp </li>
-                        
-                          <li class="truncate"> jQuery </li>
-                        
-                          <li class="truncate"> Node.js </li>
-                        
-                          <li class="truncate"> PhoneGap </li>
-                        
-                          <li class="truncate"> ScrollMagic </li>
-                        
-                          <li class="truncate"> Slick </li>
-                        
-                          <li class="truncate"> ThreeJS </li>
-                        
-                      </ul>
-                    </div>
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details less hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill less" data='{"init" : "2017-10-01T00:00:00.000", "active" : ""}'></div>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          
-            
-              <div class="language-details mathpiper hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill mathpiper" data='{"init" : "2015-09-01T00:00:00.000", "active" : "2015-12-01T00:00:00.000"}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETEC2601 - Database Systems </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details php hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill php" data='{"init" : "2018-01-01T00:00:00.000", "active" : ""}'></div>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          
-            
-              <div class="language-details python hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill python" data='{"init" : "2013-09-01T00:00:00.000", "active" : ""}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETGG1801 - Game Programming Foundations 1 </li>
-                        
-                          <li class="truncate"> ETGG1802 - Game Programming Foundations 2 </li>
-                        
-                          <li class="truncate"> ETGG1803 - Concepts of 3D Graphics & Math </li>
-                        
-                          <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                    <div class="col-6">
-                      <h3> Technologies Used: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> lxml </li>
-                        
-                          <li class="truncate"> numpy </li>
-                        
-                          <li class="truncate"> openpyxl </li>
-                        
-                          <li class="truncate"> PasteBinAPI </li>
-                        
-                          <li class="truncate"> PIL </li>
-                        
-                          <li class="truncate"> PySVN </li>
-                        
-                          <li class="truncate"> python-twitter </li>
-                        
-                      </ul>
-                    </div>
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details ruby hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill ruby" data='{"init" : "2016-01-01T00:00:00.000", "active" : ""}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETEC2104 - Object Oriented Programming and Software Engineering </li>
-                        
-                          <li class="truncate"> ETEC2601 - Database Systems </li>
-                        
-                          <li class="truncate"> ETEC3201 - Networking and Communication </li>
-                        
-                          <li class="truncate"> ETEC3402 - Automata and Formal Languages </li>
-                        
-                          <li class="truncate"> ETEC4401 - Compiler Design </li>
-                        
-                          <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                    <div class="col-6">
-                      <h3> Technologies Used: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> Liquid </li>
-                        
-                          <li class="truncate"> Jekyll </li>
-                        
-                          <li class="truncate"> Nokogiri </li>
-                        
-                          <li class="truncate"> Qt </li>
-                        
-                          <li class="truncate"> Ruby2D </li>
-                        
-                      </ul>
-                    </div>
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details sass hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill sass" data='{"init" : "2018-03-12T00:00:00.000", "active" : ""}'></div>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          
-            
-              <div class="language-details sql hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill sql" data='{"init" : "2015-09-01T00:00:00.000", "active" : "2015-12-01T00:00:00.000"}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETEC2601 - Database Systems </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                </div>
-              
-            </div>
-          
-            
-              <div class="language-details typescript hidden">
-            
-              <div class="row">
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Currently in Use
-                  </p>
-                </div>
-                <div class="col-6">
-                  <p>
-                    
-                      <i class="far fa-square"></i>
-                    
-                    Taught in School
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12" style="width: 100%; width: -webkit-fill-available;">
-                  <div class="skill-tube">
-                    <div class="skill-fill typescript" data='{"init" : "2015-09-01T00:00:00.000", "active" : "2015-12-01T00:00:00.000"}'></div>
-                  </div>
-                </div>
-              </div>
-              
-                <div class="row">
-                  
-                    <div class="col-6">
-                      <h3> Classes Used In: </h3>
-                      
-                      <ul style="list-style-type: none;">
-                        
-                          <li class="truncate"> ETGG4803 - Artificial Intelligence </li>
-                        
-                      </ul>
-                    </div>
-                  
-                  
-                </div>
-              
-            </div>
-          
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <h2>Interested:</h2>
-        <div class="table-responsive">
-          <table class="table table-bordered table-striped table-sm">
-            <thead>
               <tr>
-                <th>
-                  Language
-                </th>
-                <th>
-                  Dabbled?
-                </th>
+                <td>
+                  Basic-256
+                </td>
+                <td>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              
-              
-                <tr>
-                  <td>
-                    Basic-256
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Clojure
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    COBOL
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Elixir
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Fortran
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Go
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Haskell
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Kotlin
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Lisp
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Lua
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Nim
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    OCaml
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Pascal
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Prolog
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    R
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-check-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Rust
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>
-                    Swift
-                  </td>
-                  <td>
-                    
-                      <i class="far fa-square"></i>
-                    
-                  </td>
-                </tr>
-              
-            </tbody>
-          </table>
-        </div>
+            
+              <tr>
+                <td>
+                  Clojure
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  COBOL
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Elixir
+                </td>
+                <td>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Fortran
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Go
+                </td>
+                <td>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Haskell
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Kotlin
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Lisp
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Lua
+                </td>
+                <td>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Nim
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  OCaml
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Pascal
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Prolog
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  R
+                </td>
+                <td>
+                  
+                    <i class="far fa-check-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Rust
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+              <tr>
+                <td>
+                  Swift
+                </td>
+                <td>
+                  
+                    <i class="far fa-square"></i>
+                  
+                </td>
+              </tr>
+            
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </div>
 
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-lg-12 overlay-screen hidden">
+      <div class="row">
+        <div class="col-xs-12 col-lg-12 overlay-screen hidden"></div>
       </div>
     </div>
   </body>

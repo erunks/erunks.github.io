@@ -2,16 +2,20 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-11">
-        <ul>
-          {% for page in site.pages %}
-            {% unless page.url contains "asset" or page.url contains "base" or page.url contains "thanks" %}
-              {% assign pageName = page.url | remove_first: "/" %}
-              {% if pageName == "" %}
-                {% assign pageName = "index.html" %}
-              {% endif %}
-              <li><a href="{{page.url | relative}}">{{pageName}}</a></li>
+        <ul style="list-style-type: none;">
+          <li><a href="./index.html" alt="Home" title="Home">Home</a></li>
+          <li><a href="./about.html" alt="About" title="About">About</a></li>
+          {% assign sorted = site.pages | sort: "title" %}
+          {% for page in sorted %}
+            {% unless page.url contains "asset" or
+                      page.url contains "thanks" or
+                      page.title contains "Home" or
+                      page.title contains "About" or
+                      page.title contains "Contact" %}
+              <li><a href="{{page.url | relative}}">{{page.title}}</a></li>
             {% endunless %}
           {% endfor %}
+          <li><a href="./contact.html" alt="Contact" title="Contact">Contact</a></li>
         </ul>
       </div>
       <div class="col-xs-1">
@@ -19,7 +23,4 @@
       </div>
     </div>
   </div>
-</div>
-<div class="col-1">
-  <a onclick="toggleNav();"><i class="nav-menu-icon fas fa-bars"></i></a>
 </div>
