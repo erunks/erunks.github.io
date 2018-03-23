@@ -1,3 +1,11 @@
+html,
+body,
+.fill-height{
+  height: 100%;
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+}
+
 .hidden{
   display: none;
   height: 0px;
