@@ -2,9 +2,21 @@ html,
 body,
 .fill-height{
   height: 100%;
+  min-height: 100%;
   min-height: -moz-available;
   min-height: -webkit-fill-available;
-}
+};
+
+.fill-width{
+  width: 100%;
+  min-width: 100%;
+  min-width: -moz-available;
+  min-width: -webkit-fill-available;
+};
+
+img{
+  -ms-interpolation-mode: bicubic;
+};
 
 .hidden{
   display: none;
@@ -34,5 +46,5 @@ body,
   &:hover{
     overflow: visible;
     white-space: normal;
-  }
-}
+  };
+};

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -12,6 +12,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" onload="window.$ = window.jQuery"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="text/javascript" src="./assets/javascript/main.js"></script>
+<script type="text/javascript" src="./assets/javascript/BrowserDetect.js"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
@@ -66,8 +67,8 @@
         <div class="col-sm-12 col-md-11" style="padding: 0;">
           <div class="container-fluid fill-height">
             <div class="row fill-height" style="background: white; border: 1px solid black; box-shadow: 5px 5px rgba(0,0,0,0.5);">
-              <div class="col-xs-12 col-lg-12" style="width: 100%; width: -webkit-fill-available;">
-                <div class="container-fluid">
+              <div class="col-xs-12 col-lg-12 fill-width">
+                <div id="main-content" class="container-fluid">
   <div class="row">
     <div class="col-12">
       <h1 style="border-bottom: 1px solid black; margin-top: 1rem;">Let's Get in Touch</h1>
@@ -116,4 +117,11 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript">
+    $(function(){
+      if(BrowserDetect.browser === "Explorer"){
+        extendHeight();
+      }
+    });
+  </script>
 </html>

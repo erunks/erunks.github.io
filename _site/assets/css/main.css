@@ -26,7 +26,11 @@
   100% { opacity: 0; } }
 @-webkit-keyframes fade-out { 0% { opacity: 1; }
   100% { opacity: 0; } }
-html, body, .fill-height { height: 100%; min-height: -moz-available; min-height: -webkit-fill-available; }
+html, body, .fill-height { height: 100%; min-height: 100%; min-height: -moz-available; min-height: -webkit-fill-available; }
+
+.fill-width { width: 100%; min-width: 100%; min-width: -moz-available; min-width: -webkit-fill-available; }
+
+img { -ms-interpolation-mode: bicubic; }
 
 .hidden { display: none; height: 0px; visibility: hidden; width: 0px; }
 

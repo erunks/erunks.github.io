@@ -19,6 +19,22 @@ function calculateBarFill(){
   });
 };
 
+/* Extends the height of the fill-height
+elements to on the page, assuming that the
+height was not scalling properly. *cough*
+*cough* *IE* */
+function extendHeight(){
+  var height = $('#main-content')[0].offsetHeight | $('#main-content')[0].clientHeight | $('#main-content')[0].scrollHeight;
+  // console.log(height);
+  $('.fill-height').each(function(i,e){
+    // console.log(i,e.getAttribute("style"));
+    $(e)[0].style.height = height;
+    if(e.getAttribute("style") === null){
+      e.setAttribute("style","height: " + height +"px;");
+    }
+  });
+};
+
 /* Hides/Shows the language details of
 the selected language from the select
 form input on mobile scaled devices */
