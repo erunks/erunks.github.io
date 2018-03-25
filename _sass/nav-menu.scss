@@ -19,3 +19,44 @@
   margin: 10px 15px;
 };
   
+#side-nav{
+  list-style-type: none;
+
+  & > li > a{
+    color: $color1;
+
+    &:hover{
+      color: $color5;
+      text-decoration: none;
+      transition: 0.5s color;
+    };
+  };
+};
+
+#nav-bar,
+#mobile-nav-bar{
+  & > div{
+    text-align: center;
+
+    & > a{
+      color: $color2;
+
+      &:hover{
+        color: $color5;
+        text-decoration: none;
+        transition: color 0.5s;
+      };
+    };
+  };
+
+  & > span{
+    color: $color5;
+    width: 0;
+  };
+};
+
+#mobile-nav-bar{
+  background: $color3;
+  margin-top: 0rem !important;
+  padding-bottom: 1rem;
+};
