@@ -9,9 +9,9 @@
     {% include scripts.html %}
   </head>
 
-  <body style="background-color: rgba(130,130,130,0.25);">
+  <body id="main-content" style="background-color: rgba(130,130,130,0.25);">
     <div class="container fill-height">
-      <div class="row">
+      <div class="row" id="mobile-nav-bar">
         <div class="col-12 d-block d-md-none" style="padding: 0;">
           <a onclick="toggleNav();"><i class="nav-menu-icon fas fa-bars"></i></a>
         </div>
@@ -20,21 +20,36 @@
         {% include sidenav.html %}
       </div>
       <div class="row fill-height">
-        <div class="col-md-1 d-none d-md-block" style="padding: 0; padding-left: 0.75%;">
-          <a onclick="toggleNav();" style="float: left;"><i class="nav-menu-icon fas fa-bars"></i></a>
+        <div class="col-md-1 d-none d-md-block" id="nav-bar" style="padding: 0; padding-left: 0.75%;">
+          <a onclick="toggleNav();" style="float: left; position: sticky; top: 0;"><i class="nav-menu-icon fas fa-bars"></i></a>
         </div>
-        <div class="col-sm-12 col-md-11" style="padding: 0;">
+        <div  class="col-sm-12 col-md-11" style="padding: 0;">
           <div class="container-fluid fill-height">
             <div class="row fill-height" style="background: white; border: 1px solid black; box-shadow: 5px 5px rgba(0,0,0,0.5);">
               <div class="col-xs-12 col-lg-12 fill-width">
                 {{ content }}
               </div>
             </div>
+            <!-- <br/>
+            <div class="row">
+              <div class="col-4" style="text-align: center;">
+                <a href="./index.html">Home</a>
+              </div>
+              <span style="width: 0;">|</span>
+              <div class="col-4" style="text-align: center;">
+                <a href="./about.html">About</a>
+              </div>
+              <span style="width: 0;">|</span>
+              <div class="col-4" style="text-align: center;">
+                <a href="./contact.html">Contact</a>
+              </div>
+            </div>
+            <br/> -->
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-lg-12 overlay-screen hidden"></div>
+        <div class="col-xs-12 col-lg-12 overlay-screen fill-height fill-width hidden"></div>
       </div>
     </div>
   </body>
@@ -43,6 +58,8 @@
       if(BrowserDetect.browser === "Explorer"){
         extendHeight();
       }
+      // addMagic("#mobile-nav-bar","#main-content");
+      // addMagic("#nav-bar","#main-content");
     });
   </script>
 </html>
