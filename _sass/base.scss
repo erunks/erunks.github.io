@@ -24,6 +24,20 @@ h1{
   font-size: 2.3rem;
 };
 
+a.button {
+  color: $color5;
+  border: 3px solid $color5;
+  padding: 15px 20px;
+  text-decoration: none;
+
+  &:hover{
+    background-color: $color5;
+    border-color: white;
+    color: white;
+    transition: background-color, border-color, color, 0.5s;
+  };
+};
+
 em{
   color: $color5;
 };

@@ -8,6 +8,9 @@ body { background-color: #ede6e3; }
 
 h1 { font-size: 2.3rem; }
 
+a.button { color: #c20114; border: 3px solid #c20114; padding: 15px 20px; text-decoration: none; }
+a.button:hover { background-color: #c20114; border-color: white; color: white; transition: background-color, border-color, color, 0.5s; }
+
 em { color: #c20114; }
 
 img { -ms-interpolation-mode: bicubic; }

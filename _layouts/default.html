@@ -10,23 +10,7 @@
   </head>
 
   <header>
-    <div class="row">
-        <div class="col-12">
-          <div id="nav-bar" class="row d-flex" style="margin: 1rem 0;">
-            <div class="col-4">
-              <a href="./index.html">Home</a>
-            </div>
-            <span>|</span>
-            <div class="col-4">
-              <a href="./about.html">About</a>
-            </div>
-            <span>|</span>
-            <div class="col-4">
-              <a href="./contact.html">Contact</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    {% include header.html %}
   </header>
 
   <body id="main-content">
@@ -56,59 +40,6 @@
   </body>
 
   <footer>
-    <div class="row">
-      <div class="col-12" style="padding-right: 0;">
-        <div id="mobile-nav-bar" class="row d-flex d-md-none" style="margin: 1rem 0;">
-          <div class="col-4">
-            <a href="./index.html">Home</a>
-          </div>
-          <span>|</span>
-          <div class="col-4">
-            <a href="./about.html">About</a>
-          </div>
-          <span>|</span>
-          <div class="col-4">
-            <a href="./contact.html">Contact</a>
-          </div>
-        </div>
-        <div class="row social">
-          <div class="col-3">
-            <a href="https://www.facebook.com/eddierunkel" alt="facebook" title="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </div>
-          <div class="col-3">
-            <a href="https://twitter.com/erunks" alt="twitter" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </div>
-          <div class="col-3">
-            <a href="https://www.instagram.com/erunk5/" alt="instagram" title="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-          <div class="col-3">
-            <a href="https://github.com/erunks" alt="github" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-        <div class="row credit">
-          <div class="col-12">
-            <p>Edward Runkel<em>&copy;2018</em></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script type="text/javascript">
-      $(function(){
-        if(BrowserDetect.browser === "Explorer"){
-          extendHeight();
-        }
-        // addMagic("#mobile-nav-bar","#main-content");
-        // addMagic("#nav-bar","#main-content");
-      });
-    </script>
+    {% include footer.html %}
   </footer>
 </html>
