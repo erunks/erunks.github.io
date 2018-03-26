@@ -81,6 +81,7 @@ canvas#pt { height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-in
 #nav-bar > span, #mobile-nav-bar > span { color: #c20114; width: 0; }
 
 #mobile-nav-bar { background: #8b8982; margin-top: 0rem !important; padding-bottom: 1rem; }
+#mobile-nav-bar > span { color: #0c120c; }
 
 .skill-tube { background-color: white; border: 1px solid black; border-radius: 25px; height: 25px; margin-bottom: 20px; width: 100%; width: -webkit-fill-available; }
 

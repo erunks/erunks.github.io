@@ -59,4 +59,8 @@
   background: $color3;
   margin-top: 0rem !important;
   padding-bottom: 1rem;
+
+  & > span{
+    color: $color1;
+  };
 };
