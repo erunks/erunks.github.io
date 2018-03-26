@@ -16,6 +16,14 @@ body,
   -webkit-min-logical-width: fit-content;
 };
 
+body{
+  background-color: $color2;
+};
+
+h1{
+  font-size: 2.3rem;
+};
+
 em{
   color: $color5;
 };
@@ -51,7 +59,7 @@ img{
   };
 };
 
-#header{
+header > .row{
   background: $color1;
   margin-bottom: 1rem;
   border-bottom: 3px solid $color5;
@@ -61,7 +69,7 @@ img{
   };
 };
 
-#footer{
+footer > .row{
   background: $color1;
   margin-top: 1rem;
   border-top: 3px solid $color5;
