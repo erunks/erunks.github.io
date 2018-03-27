@@ -9,37 +9,34 @@
     {% include scripts.html %}
   </head>
 
-  <header>
-    {% include header.html %}
-  </header>
-
   <body id="main-content">
-    <div class="container fill-height">
-      <!-- <div class="row">
-        {% include sidenav.html %}
-      </div> -->
-      <div class="row fill-height">
-        <!-- <div class="col-md-1 d-none d-md-block" id="nav-bar" style="padding: 0; padding-left: 0.75%;">
-          <a onclick="toggleNav();" style="float: left; position: sticky; top: 0;"><i class="nav-menu-icon fas fa-bars"></i></a>
-        </div> -->
-        <div  class="col-12" style="padding: 0;">
-          <div class="container-fluid fill-height">
-            <div class="row fill-height" style="background: white; border: 1px solid black; box-shadow: 5px 5px rgba(0,0,0,0.5);">
-              <div class="col-xs-12 col-lg-12 fill-width">
-                {{ content }}
+    <header>
+      {% include header.html %}
+    </header>
+
+    <main>
+      <div class="container -fill-height">
+        <div class="row -fill-height">
+          <div  class="col-12" style="padding: 0;">
+            <div class="container-fluid -fill-height">
+              <div class="row -fill-height" style="background: white; border: 1px solid black; box-shadow: 5px 5px rgba(0,0,0,0.5);">
+                <div class="col-xs-12 col-lg-12 -fill-width">
+                  {{ content }}
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <br/>
+        <div class="row">
+          <div class="col-xs-12 col-lg-12 overlay-screen -fill-height -fill-width hidden"></div>
+        </div>
       </div>
-      <br/>
-      <div class="row">
-        <div class="col-xs-12 col-lg-12 overlay-screen fill-height fill-width hidden"></div>
-      </div>
-    </div>
+    </main>
+
+    <footer class="footer">
+      {% include footer.html %}
+    </footer>
   </body>
 
-  <footer>
-    {% include footer.html %}
-  </footer>
 </html>
