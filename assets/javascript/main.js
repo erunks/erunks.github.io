@@ -5,7 +5,6 @@ the time of my life having
 programming knowledge */
 function calculateBarFill(){
   $('.skill-fill').each(function(i,e){
-    // console.log(i,e);
     var json = JSON.parse(e.attributes['data'].value);
     var start = new Date(json["init"]);
     var end = (json["active"] == "") ? new Date() : new Date(json["active"]);
@@ -25,33 +24,28 @@ height was not scalling properly. *cough*
 *cough* *IE* *cough* *Firefox* */
 function extendHeight(){
   var mainContent = $('main > .container')[0];
-  var html = $('html')[0];
-  var mHeight = mainContent.offsetHeight | mainContent.clientHeight | mainContent.scrollHeight;
-  var hHeight = html.offsetHeight | html.clientHeight | html.scrollHeight;
-  // console.log(window.innerHeight,window.innerHeight < mHeight,mHeight,hHeight,hHeight > mHeight);
-  if(window.innerHeight > mHeight){
-    console.log("more");
+  var height = mainContent.offsetHeight | mainContent.clientHeight | mainContent.scrollHeight;
+  if(window.innerHeight > height){
     return;
   }
   else{
-    html.classList.add('fill-height');
-    console.log("less");
+    $('html')[0].classList.add('fill-height');
   }
 
 
   $('.fill-height').each(function(i,e){
     var style = e.getAttribute("style");
     if(style === null){
-      e.setAttribute("style","height: " + mHeight +"px;");
+      e.setAttribute("style","height: " + height +"px;");
     }
     else{
       console.log(style);
       if(style.includes('height')){
         style = style.replace(/(height:\ \d+.+?;)/,'');
-        e.setAttribute("style",style + " height: " + mHeight +"px;");
+        e.setAttribute("style",style + " height: " + height +"px;");
       }
       else{
-        e.setAttribute("style",style + " height: " + mHeight +"px;");
+        e.setAttribute("style",style + " height: " + height +"px;");
       }
     }
   });
@@ -62,7 +56,6 @@ the selected language from the select
 form input on mobile scaled devices */
 function selectLanguageDetails(){
   $('select').on('change',function(event){
-	// console.log(event.target.value);
 	$('.language-details').each(function(i,e){
 		if(!e.classList.contains('hidden')){
 			e.classList.add("hidden");

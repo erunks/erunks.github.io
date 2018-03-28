@@ -122,7 +122,8 @@ footer > .row{
   text-align: center;
 
   & > * > a{
-    & > i{
+    & > i,
+    & > object{
       border: 2px solid $color5;
       border-radius: 25px;
       color: $color5;
@@ -140,5 +141,13 @@ footer > .row{
         transition: background, border-color, color, 0.5s;
       };
     };
+
+    & > object > #document > svg > path,
+    & > object > * > svg > path,
+    & > object > svg > path,
+    & > object > path,
+    & > path{
+      fill: $color5;
+    }
   };
 };

@@ -37,8 +37,9 @@ footer > .row > * > .row { padding-top: 1rem; }
 .credit > * > p { color: #8b8982; text-align: center; }
 
 .social { text-align: center; }
-.social > * > a > i { border: 2px solid #c20114; border-radius: 25px; color: #c20114; font-size: 1.5rem; height: 2.5rem; line-height: 1.7rem; margin: auto; padding: 5px; width: 2.5rem; }
-.social > * > a > i:hover { background: #c20114; border-color: #0c120c; color: #0c120c; transition: background, border-color, color, 0.5s; }
+.social > * > a > i, .social > * > a > object { border: 2px solid #c20114; border-radius: 25px; color: #c20114; font-size: 1.5rem; height: 2.5rem; line-height: 1.7rem; margin: auto; padding: 5px; width: 2.5rem; }
+.social > * > a > i:hover, .social > * > a > object:hover { background: #c20114; border-color: #0c120c; color: #0c120c; transition: background, border-color, color, 0.5s; }
+.social > * > a > object > #document > svg > path, .social > * > a > object > * > svg > path, .social > * > a > object > svg > path, .social > * > a > object > path, .social > * > a > path { fill: #c20114; }
 
 canvas#pt { height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-index: -1; }
 
