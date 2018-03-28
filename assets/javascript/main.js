@@ -22,13 +22,37 @@ function calculateBarFill(){
 /* Extends the height of the fill-height
 elements to on the page, assuming that the
 height was not scalling properly. *cough*
-*cough* *IE* */
+*cough* *IE* *cough* *Firefox* */
 function extendHeight(){
-  var mainContent = $('#main-content')[0];
-  var height = mainContent.offsetHeight | mainContent.clientHeight | mainContent.scrollHeight;
+  var mainContent = $('main > .container')[0];
+  var html = $('html')[0];
+  var mHeight = mainContent.offsetHeight | mainContent.clientHeight | mainContent.scrollHeight;
+  var hHeight = html.offsetHeight | html.clientHeight | html.scrollHeight;
+  // console.log(window.innerHeight,window.innerHeight < mHeight,mHeight,hHeight,hHeight > mHeight);
+  if(window.innerHeight > mHeight){
+    console.log("more");
+    return;
+  }
+  else{
+    html.classList.add('fill-height');
+    console.log("less");
+  }
+
+
   $('.fill-height').each(function(i,e){
-    if(e.getAttribute("style") === null){
-      e.setAttribute("style","height: " + height +"px;");
+    var style = e.getAttribute("style");
+    if(style === null){
+      e.setAttribute("style","height: " + mHeight +"px;");
+    }
+    else{
+      console.log(style);
+      if(style.includes('height')){
+        style = style.replace(/(height:\ \d+.+?;)/,'');
+        e.setAttribute("style",style + " height: " + mHeight +"px;");
+      }
+      else{
+        e.setAttribute("style",style + " height: " + mHeight +"px;");
+      }
     }
   });
 };

@@ -48,12 +48,12 @@
     </header>
 
     <main>
-      <div class="container -fill-height">
-        <div class="row -fill-height">
+      <div class="container">
+        <div class="row ">
           <div  class="col-12" style="padding: 0;">
-            <div class="container-fluid -fill-height">
-              <div class="row -fill-height" style="background: white; border: 1px solid black; box-shadow: 5px 5px rgba(0,0,0,0.5);">
-                <div class="col-xs-12 col-lg-12 -fill-width">
+            <div class="container-fluid">
+              <div class="row " style="background: white; border: 1px solid black; box-shadow: 5px 5px rgba(0,0,0,0.5);">
+                <div class="col-xs-12 col-lg-12">
                   <h1> Thanks for reaching out! </h1>
 <p> I'll be in touch with you, as soon as possible. </p>
 
@@ -64,7 +64,7 @@
         </div>
         <br/>
         <div class="row">
-          <div class="col-xs-12 col-lg-12 overlay-screen -fill-height -fill-width hidden"></div>
+          <div class="col-xs-12 col-lg-12 overlay-screen hidden"></div>
         </div>
       </div>
     </main>
@@ -119,6 +119,13 @@
   $(function(){
     if(BrowserDetect.browser === "Explorer"){
       extendHeight();
+    }
+    else if(BrowserDetect.browser === "Firefox"){
+      // $('html')[0].classList.add('fill-height');
+      extendHeight();
+      window.addEventListener("resize",function(){
+        extendHeight();
+      });
     }
     // addMagic("#mobile-nav-bar","#main-content");
     // addMagic("#nav-bar","#main-content");

@@ -4,9 +4,13 @@ html, body, main, .fill-height { height: 100%; min-height: 100%; min-height: -mo
 
 .fill-width { width: 100%; min-width: 100%; min-width: -moz-available; min-width: -webkit-fill-available; -webkit-min-logical-width: fit-content; }
 
+html { overflow-x: hidden; }
+
 body { background-color: #ede6e3; }
 
-.footer { bottom: 0; position: relative; width: 100%; }
+header { margin-bottom: 2rem; }
+
+.footer { bottom: 0; margin-top: 2rem; position: relative; width: 100%; }
 
 h1 { font-size: 2.3rem; }
 

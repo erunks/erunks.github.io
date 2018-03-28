@@ -48,6 +48,13 @@
     if(BrowserDetect.browser === "Explorer"){
       extendHeight();
     }
+    else if(BrowserDetect.browser === "Firefox"){
+      // $('html')[0].classList.add('fill-height');
+      extendHeight();
+      window.addEventListener("resize",function(){
+        extendHeight();
+      });
+    }
     // addMagic("#mobile-nav-bar","#main-content");
     // addMagic("#nav-bar","#main-content");
   });
