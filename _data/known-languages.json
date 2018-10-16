@@ -98,7 +98,7 @@
         "activeDate" : "",
         "inUse" : true,
         "formallyLearned" : true,
-        "tech" : ["AJAX", "Bootstrap", "Electron", "Greensock", "Gulp", "jQuery", "Node.js", "PhoneGap", "ScrollMagic", "Slick", "ThreeJS"],
+        "tech" : ["AJAX", "Bootstrap", "Electron", "Greensock", "Gulp", "jQuery", "Node.js", "PhoneGap", "React", "ScrollMagic", "Slick", "ThreeJS"],
         "classes" : ["ETGG2801 - Computer Graphics 1",
                     "ETGG2802 - Computer Graphics 2",
                     "ETEC3201 - Networking and Communication",
@@ -147,8 +147,8 @@
       "content" : {
         "name" : "LESS",
         "initDate" : "2017-10-01T00:00:00.000",
-        "activeDate" : "",
-        "inUse" : true,
+        "activeDate" : "2018-06-20T00:00:00.000",
+        "inUse" : false,
         "formallyLearned" : false
       }
     },
@@ -167,8 +167,8 @@
       "content" : {
         "name" : "PHP",
         "initDate" : "2018-01-01T00:00:00.000",
-        "activeDate" : "",
-        "inUse" : true,
+        "activeDate" : "2018-06-20T00:00:00.000",
+        "inUse" : false,
         "formallyLearned" : false
       }
     },
@@ -180,7 +180,7 @@
         "activeDate" : "",
         "inUse" : true,
         "formallyLearned" : true,
-        "tech" : ["Liquid","Jekyll","Nokogiri","Qt","Ruby2D"],
+        "tech" : ["Liquid","Jekyll","Nokogiri","Qt","Rails","Ruby2D"],
         "classes" : ["ETEC2104 - Object Oriented Programming and Software Engineering",
                     "ETEC2601 - Database Systems",
                     "ETEC3201 - Networking and Communication",
@@ -221,8 +221,8 @@
       "content" : {
         "name" : "SQL",
         "initDate" : "2015-09-01T00:00:00.000",
-        "activeDate" : "2015-12-01T00:00:00.000",
-        "inUse" : false,
+        "activeDate" : "",
+        "inUse" : true,
         "formallyLearned" : true,
         "classes" : ["ETEC2601 - Database Systems"]
       }
