@@ -1,7 +1,7 @@
 import { arrayOf, shape, string } from 'prop-types';
-import Head from 'next/head';
-import { getAllSocialLinks } from 'lib/index';
 import map from 'lodash/map';
+import Head from 'next/head';
+import { getAllSocialLinks } from '../lib/index';
 import styles from '../styles/Home.module.css';
 
 const Home = ({ socials }) => (

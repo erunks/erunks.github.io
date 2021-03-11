@@ -34,17 +34,5 @@
     "react/jsx-filename-extension": 0,
     "react/jsx-props-no-spreading": 0,
     "react/react-in-jsx-scope": 0
-  },
-  "settings": {
-    "import/resolver": {
-      "alias": {
-        "map": [
-          ["^lib$", "./lib"],
-          ["^pages$", "./pages"],
-          ["^styles$", "./styles"]
-        ],
-        "extensions": [".css", ".js", "json", ".scss"]
-      }
-    }
   }
 }
