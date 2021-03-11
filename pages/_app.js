@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import { any, elementType } from 'prop-types';
+import '../styles/globals.css';
 
-function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const App = ({ Component, pageProps }) => <Component { ...pageProps } />;
 
-export default App
+App.propTypes = {
+  Component: elementType.isRequired,
+  pageProps: any,
+};
+
+App.defaultProps = {
+  pageProps: {},
+};
+
+export default App;
