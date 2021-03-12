@@ -2,7 +2,7 @@ import { arrayOf, shape, string } from 'prop-types';
 import map from 'lodash/map';
 import Head from 'next/head';
 import { getAllSocialLinks } from '../lib/index';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.scss';
 
 const Home = ({ socials }) => (
   <div className={styles.container}>

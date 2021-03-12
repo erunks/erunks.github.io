@@ -1,5 +1,5 @@
 import { any, elementType } from 'prop-types';
-import '../styles/globals.css';
+import '../styles/globals.scss';
 
 const App = ({ Component, pageProps }) => <Component {...pageProps} />;
 
