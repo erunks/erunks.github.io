@@ -4,13 +4,15 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: black;
 }
 
 a {
-  color: inherit;
+  // color: invert(black);
   text-decoration: none;
 }
 
 * {
+  color: invert(black);
   box-sizing: border-box;
 }
