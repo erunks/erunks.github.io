@@ -12,32 +12,36 @@ const Home = ({ socials }) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <header>
-      Header
-      <nav>
-        <Link href="/">
-          Home
-        </Link>
-        <Link href="/about">
-          About
-        </Link>
-        <Link href="/contact">
-          Contact
-        </Link>
-      </nav>
-    </header>
+    <header className={styles.header}>Header</header>
 
-    <main className={`${styles.main} main__index`}>
-      {map(socials, (item) => (
-        <div key={item.name}>
-          <a href={item.url} target="_blank" rel="noopener noreferrer">
-            {item.name}
-          </a>
-        </div>
-      ))}
+    <main className={styles.main}>
+      <section className={styles.side_nav}>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section className={styles.main_content}>
+        {map(socials, (item) => (
+          <div key={item.name}>
+            <a href={item.url} target="_blank" rel="noopener noreferrer">
+              {item.name}
+            </a>
+          </div>
+        ))}
+      </section>
     </main>
 
-    <footer>Footer</footer>
+    <footer className={styles.footer}>Footer</footer>
   </div>
 );
 
