@@ -1,0 +1,72 @@
+@import 'styles/local-includes';
+
+.container {
+  column-gap: 25px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+
+  section {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  @media (max-width: 768px) {
+    column-gap: 0;
+  }
+}
+
+.main,
+.footer,
+.header {
+  background-color: $light-black;
+}
+
+.main {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  margin: 1.5rem 0;
+
+  section {
+    @include border-style;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+    &.main_content {
+      display: flex;
+      height: inherit;
+      flex: auto;
+    }
+  }
+}
+
+.footer,
+.header {
+  @include border-style;
+
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  width: 100%;
+
+  img {
+    margin-left: 0.5rem;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
