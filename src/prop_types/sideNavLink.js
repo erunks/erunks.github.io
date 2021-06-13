@@ -1,8 +1,8 @@
-import { string } from 'prop-types';
+import { shape, string } from 'prop-types';
 
-const sideNavLink = {
+const sideNavLink = shape({
   href: string.isRequired,
   text: string.isRequired,
-};
+});
 
 export default sideNavLink;

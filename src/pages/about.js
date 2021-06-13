@@ -2,37 +2,18 @@ import { arrayOf, shape } from 'prop-types';
 import { workExperience } from 'prop_types';
 import { richTextFromMarkdown } from '@contentful/rich-text-from-markdown';
 import WorkExperience from 'components/WorkExperience';
-import MainLayout from 'layouts/MainLayout';
 import { getAllWorkExperiences } from 'lib';
 import map from 'lodash/map';
 import set from 'lodash/set';
 
 import { work } from 'components/WorkExperience/WorkExperience.module.scss';
 
-const links = [
-  {
-    href: '/',
-    text: 'Home',
-  },
-  {
-    href: '/about',
-    text: 'About',
-  },
-  {
-    href: '/contact',
-    text: 'Contact',
-  },
-];
-
-const About = ({ workExperiences }) => (
-  <MainLayout links={links} title="About">
-    {map(workExperiences, (workInfo) => (
-      <div className={work} key={workInfo.name}>
-        <WorkExperience {...workInfo} />
-      </div>
-    ))}
-  </MainLayout>
-);
+const About = ({ workExperiences }) =>
+  map(workExperiences, (workInfo) => (
+    <div className={work} key={workInfo.name}>
+      <WorkExperience {...workInfo} />
+    </div>
+  ));
 
 export const getStaticProps = async () => {
   const workExperiences = await getAllWorkExperiences({

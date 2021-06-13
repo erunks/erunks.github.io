@@ -1,4 +1,4 @@
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf } from 'prop-types';
 import { sideNavLink } from 'prop_types';
 import map from 'lodash/map';
 import Link from 'next/link';
@@ -33,7 +33,7 @@ const SideNav = ({ links }) => {
 };
 
 SideNav.propTypes = {
-  links: arrayOf(shape(sideNavLink)).isRequired,
+  links: arrayOf(sideNavLink).isRequired,
 };
 
 export default SideNav;
