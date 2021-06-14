@@ -1,17 +1,28 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { arrayOf, node, oneOfType, string } from 'prop-types';
-import { sideNavLink } from 'prop_types';
+import { sideNavLink, socialLink } from 'prop_types';
 import classnames from 'classnames';
 import SideNav from 'components/SideNav';
+import isEmpty from 'lodash/isEmpty';
+import map from 'lodash/map';
 import Head from 'next/head';
+import { useRecoilState } from 'recoil';
+import { socialState } from 'recoils';
 
 import styles from './MainLayout.module.scss';
 
-const MainLayout = ({ children, links, title }) => {
+const MainLayout = ({ children, links, socialLinks, title }) => {
   const [darkMode, setDarkMode] = useState(true);
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+  const [socials, setSocials] = useRecoilState(socialState);
+
+  useEffect(() => {
+    if (isEmpty(socials)) {
+      setSocials(socialLinks);
+    }
+  }, [socials]);
 
   return (
     <div
@@ -34,7 +45,15 @@ const MainLayout = ({ children, links, title }) => {
         <main className={styles.main}>
           <section className={styles.main_content}>{children}</section>
         </main>
-        <footer className={styles.footer}>Footer</footer>
+        <footer className={styles.footer}>
+          {map(socials, ({name, url}) => (
+            <div key={name}>
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {name}
+              </a>
+            </div>
+          ))}
+        </footer>
       </section>
     </div>
   );
@@ -43,6 +62,7 @@ const MainLayout = ({ children, links, title }) => {
 MainLayout.propTypes = {
   children: oneOfType([arrayOf(node), node]).isRequired,
   links: arrayOf(sideNavLink).isRequired,
+  socialLinks: arrayOf(socialLink).isRequired,
   title: string.isRequired,
 };
 

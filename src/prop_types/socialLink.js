@@ -1,6 +1,6 @@
 import { shape, string } from 'prop-types';
 
-const social = shape({
+const socialLink = shape({
   icon: shape({
     url: string,
   }),
@@ -8,4 +8,4 @@ const social = shape({
   url: string,
 });
 
-export default social;
+export default socialLink;

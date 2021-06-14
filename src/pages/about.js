@@ -1,19 +1,32 @@
+import { useEffect } from 'react';
 import { arrayOf, shape } from 'prop-types';
 import { workExperience } from 'prop_types';
 import { richTextFromMarkdown } from '@contentful/rich-text-from-markdown';
 import WorkExperience from 'components/WorkExperience';
 import { getAllWorkExperiences } from 'lib';
+import isEmpty from 'lodash/isEmpty';
 import map from 'lodash/map';
 import set from 'lodash/set';
+import { useRecoilState } from 'recoil';
+import { workExperienceState } from 'recoils';
 
-import { work } from 'components/WorkExperience/WorkExperience.module.scss';
+import styles from 'components/WorkExperience/WorkExperience.module.scss';
 
-const About = ({ workExperiences }) =>
-  map(workExperiences, (workInfo) => (
-    <div className={work} key={workInfo.name}>
+const About = ({ work }) => {
+  const [workExperiences, setWorkExperiences] = useRecoilState(workExperienceState);
+
+  useEffect(() => {
+    if (isEmpty(workExperiences)) {
+      setWorkExperiences(work);
+    }
+  }, [workExperiences]);
+
+  return map(workExperiences, (workInfo) => (
+    <div className={styles.work} key={workInfo.name}>
       <WorkExperience {...workInfo} />
     </div>
   ));
+}
 
 export const getStaticProps = async () => {
   const workExperiences = await getAllWorkExperiences({
@@ -27,7 +40,7 @@ export const getStaticProps = async () => {
   await Promise.all(workPromises);
 
   return {
-    props: { workExperiences },
+    props: { work: workExperiences },
   };
 };
 
