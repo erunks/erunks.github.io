@@ -13,20 +13,22 @@ import { workExperienceState } from 'recoils';
 import styles from 'components/WorkExperience/WorkExperience.module.scss';
 
 const About = ({ work }) => {
-  const [workExperiences, setWorkExperiences] = useRecoilState(workExperienceState);
+  const [workExperiences, setWorkExperiences] = useRecoilState(
+    workExperienceState
+  );
 
   useEffect(() => {
     if (isEmpty(workExperiences)) {
       setWorkExperiences(work);
     }
-  }, [workExperiences]);
+  }, [setWorkExperiences, work, workExperiences]);
 
   return map(workExperiences, (workInfo) => (
     <div className={styles.work} key={workInfo.name}>
       <WorkExperience {...workInfo} />
     </div>
   ));
-}
+};
 
 export const getStaticProps = async () => {
   const workExperiences = await getAllWorkExperiences({

@@ -47,7 +47,7 @@ MyApp.getInitialProps = async (appContext) => {
 
   return {
     socialLinks,
-    ...appProps
+    ...appProps,
   };
 };
 

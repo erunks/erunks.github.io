@@ -2,15 +2,15 @@ import { atom, selector } from 'recoil';
 
 export const socialState = atom({
   key: 'socialState',
-  default: []
+  default: [],
 });
 
 export const getSocialState = selector({
   key: 'getSocialState',
-  get: ({ get }) => get(socialState)
+  get: ({ get }) => get(socialState),
 });
 
 export default {
   getSocialState,
-  socialState
+  socialState,
 };

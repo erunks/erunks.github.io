@@ -2,9 +2,9 @@ import { atom } from 'recoil';
 
 export const workExperienceState = atom({
   key: 'workExperienceState',
-  default: []
+  default: [],
 });
 
 export default {
-  workExperienceState
+  workExperienceState,
 };

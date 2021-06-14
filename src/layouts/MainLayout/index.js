@@ -22,7 +22,7 @@ const MainLayout = ({ children, links, socialLinks, title }) => {
     if (isEmpty(socials)) {
       setSocials(socialLinks);
     }
-  }, [socials]);
+  }, [setSocials, socials, socialLinks]);
 
   return (
     <div
@@ -46,7 +46,7 @@ const MainLayout = ({ children, links, socialLinks, title }) => {
           <section className={styles.main_content}>{children}</section>
         </main>
         <footer className={styles.footer}>
-          {map(socials, ({name, url}) => (
+          {map(socials, ({ name, url }) => (
             <div key={name}>
               <a href={url} target="_blank" rel="noopener noreferrer">
                 {name}
