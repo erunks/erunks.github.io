@@ -3,6 +3,7 @@ import {
   CONTENTFUL_ACCESS_TOKEN,
   CONTENTFUL_PREVIEW_ACCESS_TOKEN,
   CONTENTFUL_SPACE_ID,
+  IS_PRODUCTION,
 } from 'lib/constants';
 import get from 'lodash/get';
 import join from 'lodash/join';
@@ -10,7 +11,7 @@ import map from 'lodash/map';
 import { SOCIAL_FIELDS } from './collections/social';
 import { WORK_EXPERIENCE_FIELDS } from './collections/work_experience';
 
-const postGraphQL = async (query, preview = false) => {
+const postGraphQL = async (query, preview = IS_PRODUCTION) => {
   try {
     const url = `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`;
     const headers = {
@@ -34,7 +35,7 @@ const getAllFromCollection = async (
   collectionName,
   fields = '',
   options = {},
-  preview = false
+  preview = IS_PRODUCTION
 ) => {
   const queryOptions = join(
     map(options, (value, key) => `${key}:${value}`),
@@ -56,7 +57,10 @@ const getAllFromCollection = async (
   return get(items, `data.${collectionName}.items`, []);
 };
 
-export const getAllSocialLinks = async (options = {}, preview = false) => {
+export const getAllSocialLinks = async (
+  options = {},
+  preview = IS_PRODUCTION
+) => {
   const socials = await getAllFromCollection(
     'socialCollection',
     SOCIAL_FIELDS,
