@@ -1,4 +1,9 @@
 import axios from 'axios';
+import {
+  CONTENTFUL_ACCESS_TOKEN,
+  CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+  CONTENTFUL_SPACE_ID,
+} from 'lib/constants';
 import get from 'lodash/get';
 import join from 'lodash/join';
 import map from 'lodash/map';
@@ -7,14 +12,12 @@ import { WORK_EXPERIENCE_FIELDS } from './collections/work_experience';
 
 const postGraphQL = async (query, preview = false) => {
   try {
-    const url = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`;
+    const url = `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`;
     const headers = {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${
-          preview
-            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-            : process.env.CONTENTFUL_ACCESS_TOKEN
+          preview ? CONTENTFUL_PREVIEW_ACCESS_TOKEN : CONTENTFUL_ACCESS_TOKEN
         }`,
       },
     };

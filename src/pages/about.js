@@ -47,7 +47,7 @@ export const getStaticProps = async () => {
 };
 
 About.propTypes = {
-  workExperiences: arrayOf(shape(workExperience)).isRequired,
+  work: arrayOf(shape(workExperience)).isRequired,
 };
 
 export default About;

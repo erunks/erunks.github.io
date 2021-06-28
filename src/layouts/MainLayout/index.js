@@ -3,6 +3,7 @@ import { arrayOf, node, oneOfType, string } from 'prop-types';
 import { sideNavLink, socialLink } from 'prop_types';
 import classnames from 'classnames';
 import SideNav from 'components/SideNav';
+import Social from 'components/Social';
 import isEmpty from 'lodash/isEmpty';
 import map from 'lodash/map';
 import Head from 'next/head';
@@ -46,12 +47,8 @@ const MainLayout = ({ children, links, socialLinks, title }) => {
           <section className={styles.main_content}>{children}</section>
         </main>
         <footer className={styles.footer}>
-          {map(socials, ({ name, url }) => (
-            <div key={name}>
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                {name}
-              </a>
-            </div>
+          {map(socials, (item) => (
+            <Social key={item.name} {...item} />
           ))}
         </footer>
       </section>
