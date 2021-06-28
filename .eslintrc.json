@@ -3,7 +3,13 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["airbnb", "airbnb/hooks", "plugin:react/recommended", "prettier"],
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:import/recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ],
   "globals": {
     "React": "writable"
   },
@@ -14,7 +20,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["import", "jsx-a11y", "react", "prettier"],
+  "plugins": ["import", "jsx-a11y", "react", "react-hooks", "prettier"],
   "rules": {
     "consistent-return": 0,
     "no-console": ["error", { "allow": ["error", "warn"] }],
@@ -28,6 +34,20 @@
     ],
     "react/jsx-filename-extension": 0,
     "react/jsx-props-no-spreading": 0,
-    "react/react-in-jsx-scope": 0
+    "react/react-in-jsx-scope": 0,
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "additionalHooks": "useRecoilCallback"
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./src"]
+      }
+    }
   }
 }

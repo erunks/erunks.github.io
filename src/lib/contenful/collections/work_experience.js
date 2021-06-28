@@ -1,4 +1,7 @@
 export const WORK_EXPERIENCE_FIELDS = `
+altLogo {
+  url,
+},
 description,
 endDate,
 location,

@@ -1,18 +1,23 @@
 import axios from 'axios';
+import {
+  CONTENTFUL_ACCESS_TOKEN,
+  CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+  CONTENTFUL_SPACE_ID,
+} from 'lib/constants';
 import get from 'lodash/get';
+import join from 'lodash/join';
+import map from 'lodash/map';
 import { SOCIAL_FIELDS } from './collections/social';
 import { WORK_EXPERIENCE_FIELDS } from './collections/work_experience';
 
 const postGraphQL = async (query, preview = false) => {
   try {
-    const url = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`;
+    const url = `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`;
     const headers = {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${
-          preview
-            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-            : process.env.CONTENTFUL_ACCESS_TOKEN
+          preview ? CONTENTFUL_PREVIEW_ACCESS_TOKEN : CONTENTFUL_ACCESS_TOKEN
         }`,
       },
     };
@@ -28,11 +33,18 @@ const postGraphQL = async (query, preview = false) => {
 const getAllFromCollection = async (
   collectionName,
   fields = '',
+  options = {},
   preview = false
 ) => {
+  const queryOptions = join(
+    map(options, (value, key) => `${key}:${value}`),
+    ', '
+  );
+  const queryOptionsString = queryOptions ? `(${queryOptions})` : '';
+
   const items = await postGraphQL(
     `query {
-      ${collectionName} {
+      ${collectionName}${queryOptionsString} {
         items {
           ${fields}
         }
@@ -44,19 +56,21 @@ const getAllFromCollection = async (
   return get(items, `data.${collectionName}.items`, []);
 };
 
-export const getAllSocialLinks = async (preview = false) => {
+export const getAllSocialLinks = async (options = {}, preview = false) => {
   const socials = await getAllFromCollection(
     'socialCollection',
     SOCIAL_FIELDS,
+    options,
     preview
   );
   return socials;
 };
 
-export const getAllWorkExperiences = async (preview = false) => {
+export const getAllWorkExperiences = async (options = {}, preview = false) => {
   const experiences = await getAllFromCollection(
     'workExperienceCollection',
     WORK_EXPERIENCE_FIELDS,
+    options,
     preview
   );
   return experiences;
