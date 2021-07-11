@@ -20,7 +20,9 @@
     "pretty:all": "pretty-quick",
     "pretty:staged": "pretty-quick --staged",
     "prettylint:all": "run-s pretty:all lint:all",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@contentful/rich-text-from-markdown": "^14.1.2",
@@ -38,17 +40,53 @@
     "sass": "^1.32.8"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.1.9",
+    "babel-jest": "^27.0.6",
     "eslint": "^7.21.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
+    "jest-environment-jsdom": "^27.0.6",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "statements": 82,
+        "branches": 70,
+        "lines": 82.2,
+        "functions": 78.2
+      }
+    },
+    "collectCoverageFrom": [
+      "**/src/**/*.{js,jsx}",
+      "!**/src/lib/constants.js",
+      "!**/src/prop_types/**",
+      "!**/src/recoils/**"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleNameMapper": {
+      "\\.module\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "roots": [
+      "src"
+    ],
+    "testEnvironment": "jsdom"
   }
 }
