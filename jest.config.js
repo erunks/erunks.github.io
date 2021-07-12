@@ -11,6 +11,7 @@ module.exports = {
   collectCoverageFrom: [
     '**/src/**/*.{js,jsx}',
     '!**/src/lib/constants.js',
+    '!**/src/lib/contentful/collections/**',
     '!**/src/prop_types/**',
     '!**/src/recoils/**',
   ],
@@ -18,7 +19,6 @@ module.exports = {
   moduleNameMapper: {
     '\\.module\\.(css|scss)$': 'identity-obj-proxy',
   },
-  rootDir: 'src',
-  setupFilesAfterEnv: ['../jest.setup.js'],
+  setupFilesAfterEnv: ['./jest.setup.js'],
   testEnvironment: 'jsdom',
 };
