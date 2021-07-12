@@ -1,11 +1,11 @@
 import { shape, string } from 'prop-types';
 
-const socialLink = shape({
+const socialLink = {
   icon: shape({
     url: string,
-  }),
-  name: string,
-  url: string,
-});
+  }).isRequired,
+  name: string.isRequired,
+  url: string.isRequired,
+};
 
 export default socialLink;

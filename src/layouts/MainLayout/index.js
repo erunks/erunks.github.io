@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { arrayOf, node, oneOfType, string } from 'prop-types';
+import { arrayOf, node, oneOfType, shape, string } from 'prop-types';
 import { sideNavLink, socialLink } from 'prop_types';
 import classnames from 'classnames';
 import SideNav from 'components/SideNav';
@@ -59,7 +59,7 @@ const MainLayout = ({ children, links, socialLinks, title }) => {
 MainLayout.propTypes = {
   children: oneOfType([arrayOf(node), node]).isRequired,
   links: arrayOf(sideNavLink).isRequired,
-  socialLinks: arrayOf(socialLink).isRequired,
+  socialLinks: arrayOf(shape({ ...socialLink })).isRequired,
   title: string.isRequired,
 };
 

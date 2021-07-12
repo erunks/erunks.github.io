@@ -1,4 +1,4 @@
-import { any, arrayOf, elementType } from 'prop-types';
+import { any, arrayOf, elementType, shape } from 'prop-types';
 import { socialLink } from 'prop_types';
 import MainLayout from 'layouts/MainLayout';
 import { getAllSocialLinks } from 'lib';
@@ -55,7 +55,7 @@ MyApp.getInitialProps = async (appContext) => {
 MyApp.propTypes = {
   Component: elementType.isRequired,
   pageProps: any,
-  socialLinks: arrayOf(socialLink).isRequired,
+  socialLinks: arrayOf(shape({ ...socialLink })).isRequired,
 };
 
 MyApp.defaultProps = {
