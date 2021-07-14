@@ -10,6 +10,7 @@ module.exports = {
   },
   collectCoverageFrom: [
     '**/src/**/*.{js,jsx}',
+    '!**/src/lib/index.js',
     '!**/src/lib/constants.js',
     '!**/src/lib/contentful/collections/**',
     '!**/src/prop_types/**',

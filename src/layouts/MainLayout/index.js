@@ -28,6 +28,7 @@ const MainLayout = ({ children, links, socialLinks, title }) => {
   return (
     <div
       className={classnames(styles.container, 'layout', {
+        'dark-mode': darkMode,
         'light-mode': !darkMode,
       })}
     >

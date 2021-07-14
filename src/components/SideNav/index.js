@@ -25,7 +25,7 @@ const SideNav = ({ links }) => {
   return (
     <div className={styles.side_nav}>
       <nav>
-        <h1> Naviagtion </h1>
+        <h1> Navigation </h1>
         <ul>{map(links, (linkProps) => link(linkProps))}</ul>
       </nav>
     </div>
