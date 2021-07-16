@@ -1,1 +1,1 @@
-export * from './contenful/index';
+export * from './contentful/index';
