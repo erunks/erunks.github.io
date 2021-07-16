@@ -1,22 +1,10 @@
 import { render } from 'testUtils';
+import { sideNavLinks } from 'mocks/sideNavLinks';
 import SideNav from '.';
 
 describe('<SideNav />', () => {
   const props = {
-    links: [
-      {
-        href: '/',
-        text: 'Home',
-      },
-      {
-        href: '/about',
-        text: 'About',
-      },
-      {
-        href: '/contact',
-        text: 'Contact',
-      },
-    ],
+    links: sideNavLinks,
   };
 
   test('renders without crashing', () => {

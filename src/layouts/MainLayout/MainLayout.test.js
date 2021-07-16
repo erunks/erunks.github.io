@@ -1,23 +1,12 @@
 import { fireEvent, render } from 'testUtils';
+import { sideNavLinks } from 'mocks/sideNavLinks';
+import { socialLinks } from 'mocks/socialLinks';
 import MainLayout from '.';
 
 describe('<MainLayout />', () => {
   const props = {
-    links: [
-      {
-        href: '/',
-        text: 'Home',
-      },
-    ],
-    socialLinks: [
-      {
-        icon: {
-          url: 'https://www.placecage.com/32/32',
-        },
-        name: 'placecage',
-        url: 'https://www.placecage.com/',
-      },
-    ],
+    links: sideNavLinks,
+    socialLinks,
     title: 'Home',
   };
 

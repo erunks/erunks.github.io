@@ -1,11 +1,11 @@
 import { render } from 'testUtils';
+import { workExperiences } from 'mocks/workExperiences';
 import WorkExperience from '.';
 
 describe('<WorkExperience />', () => {
   const descriptionText =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
   const props = {
-    altLogo: { url: 'https://www.placecage.com/600/125' },
     description: {
       content: [
         {
@@ -24,13 +24,7 @@ describe('<WorkExperience />', () => {
       data: {},
       nodeType: 'document',
     },
-    endDate: null,
-    locale: 'en',
-    location: 'Geo, Location',
-    logo: { url: 'https://www.placecage.com/600/125' },
-    name: 'Company',
-    position: 'Position',
-    startDate: '2021-06-01T00:00:00.000-05:00',
+    ...workExperiences[0],
   };
 
   test('renders without crashing', () => {

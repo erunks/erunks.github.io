@@ -13,6 +13,7 @@ module.exports = {
     '!**/src/lib/index.js',
     '!**/src/lib/constants.js',
     '!**/src/lib/contentful/collections/**',
+    '!**/src/mocks/**',
     '!**/src/prop_types/**',
     '!**/src/recoils/**',
   ],
