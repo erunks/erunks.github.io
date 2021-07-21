@@ -19,7 +19,7 @@ describe('contentful', () => {
   describe('stringifyQuery', () => {
     test('should return a stringified query', () => {
       const expectedQuery =
-        '{"query":"query { posts(order:name_ASC) { items { name } } }"}';
+        '{"query":"query {\\n posts(order:name_ASC) {\\n items {\\n name\\n }\\n }\\n }"}';
       const query = `query {
         posts(order:name_ASC) { 
           items { 
@@ -38,14 +38,19 @@ describe('contentful', () => {
     const options = { order: 'name_ASC' };
 
     test('it formats the query options correctly', async () => {
-      const expectedQuery =
-        'query { posts(order:name_ASC) { items { name } } }';
-
       await contentful.getAllFromCollection(collectionName, fields, options);
 
       expect(postSpy).toHaveBeenCalledWith(
         graphqlUrl,
-        contentful.stringifyQuery({ query: expectedQuery }),
+        contentful.stringifyQuery(
+          `query {
+            ${collectionName}(order:${options.order}) {
+              items {
+                ${fields}
+              }
+            }
+          }`
+        ),
         {
           headers: graphqlHeaders,
         }
@@ -90,9 +95,15 @@ describe('contentful', () => {
 
       expect(postSpy).toHaveBeenCalledWith(
         graphqlUrl,
-        contentful.stringifyQuery({
-          query: `query { socialCollection { items { ${SOCIAL_FIELDS} } } }`,
-        }),
+        contentful.stringifyQuery(
+          `query {
+            socialCollection {
+              items {
+                ${SOCIAL_FIELDS}
+              }
+            }
+          }`
+        ),
         {
           headers: graphqlHeaders,
         }
@@ -135,9 +146,15 @@ describe('contentful', () => {
 
       expect(postSpy).toHaveBeenCalledWith(
         graphqlUrl,
-        contentful.stringifyQuery({
-          query: `query { workExperienceCollection { items { ${WORK_EXPERIENCE_FIELDS} } } }`,
-        }),
+        contentful.stringifyQuery(
+          `query {
+            workExperienceCollection {
+              items {
+                ${WORK_EXPERIENCE_FIELDS}
+              }
+            }
+          }`
+        ),
         {
           headers: graphqlHeaders,
         }

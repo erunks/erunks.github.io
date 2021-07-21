@@ -14,7 +14,7 @@ import { WORK_EXPERIENCE_FIELDS } from './collections/work_experience';
 export const stringifyQuery = (query) => {
   const replacer = (_key, value) => {
     if (typeof value === 'string') {
-      return value.replace(/\s?\n\s*/g, ' ');
+      return value.replace(/\s?\n\s*/g, '\n ');
     }
     return value;
   };
@@ -36,7 +36,7 @@ const postGraphQL = async (query, preview = IS_PRODUCTION) => {
       },
     };
 
-    const { data } = await axios.post(url, stringifyQuery({ query }), headers);
+    const { data } = await axios.post(url, stringifyQuery(query), headers);
 
     return data;
   } catch (err) {
