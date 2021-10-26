@@ -13,4 +13,4 @@ position,
 startDate,
 `;
 
-export default { WORK_EXPERIENCE_FIELDS };
+export default WORK_EXPERIENCE_FIELDS;
