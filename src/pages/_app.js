@@ -30,13 +30,13 @@ const MyApp = ({ Component, pageProps, socialLinks }) => {
 
   return (
     <RecoilRoot>
-      <MainLayout
+      {/* <MainLayout
         links={links}
         socialLinks={socialLinks}
         title={activeLink.text}
-      >
+      > */}
         <Component {...pageProps} />
-      </MainLayout>
+      {/* </MainLayout> */}
     </RecoilRoot>
   );
 };

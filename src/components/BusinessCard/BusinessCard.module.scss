@@ -1,0 +1,42 @@
+@import 'styles/local-includes';
+
+.business_card_container {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+};
+
+.business_card_body {
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  max-height: 250px;
+  max-width: 450px;
+  min-height: 250px;
+  min-width: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+
+  & > .business_card__drop_shadow {
+    background-color: rgba($off-white, 0.35);
+    bottom: -2px;
+    box-shadow: 0 0 10px 4px rgba($off-white, 0.35);
+    left: -2px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    transform: translateZ(-15px);
+    z-index: -1;
+  }
+
+  * {
+    color: $black;
+  }
+}
