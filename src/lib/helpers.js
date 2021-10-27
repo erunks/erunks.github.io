@@ -27,5 +27,6 @@ export const transformStyleToMap = (transform) => {
 };
 
 export default {
+  handleKeyUp,
   transformStyleToMap,
 };

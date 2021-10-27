@@ -14,7 +14,7 @@ logo {
   url,
 },
 organization,
-jobTtile,
+jobTitle,
 socialUrls,
 `;
 
