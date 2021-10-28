@@ -1,19 +1,5 @@
 @import 'styles/local-includes';
 
-@mixin stretch-to-edge($edge: 0) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .business_card_container {
   @include stretch-to-edge;
   @include flex-center;
@@ -29,7 +15,7 @@
   min-width: 450px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.5s;
+  transition: 0.6s;
 
   & > .business_card__drop_shadow {
     @include stretch-to-edge(-2px);
@@ -46,6 +32,9 @@
 
   & > .business_card__side {
     @include stretch-to-edge;
+
+    transform: translateZ(5px);
+    z-index: 1;
 
     hr {
       border: none;
@@ -67,14 +56,24 @@
 
   & > .business_card__front {
     @include flex-center;
+
+    background-color: darken($light-black, 5%);
+    *, hr {
+      border-top-color: $off-white;
+      color: $off-white;
+    }
+    color: $white;
     flex-direction: column;
   }
 
   & > .business_card__back {
+    background-color: $off-white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 0 10px;
+    transform-style: preserve-3d;
+    // transform: rotate3d(0, 1, 0, 180deg);
 
     .business_card__back__header {
       @include flex-center;

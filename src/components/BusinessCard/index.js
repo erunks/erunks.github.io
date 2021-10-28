@@ -1,10 +1,16 @@
-import { useEffect, useState, useRef } from 'react';
+import {
+  // useEffect,
+  useState,
+  useRef
+} from 'react';
 import { businessCard } from 'prop_types';
 import classnames from 'classnames';
+import Overlay from 'components/Overlay';
+import useMeetsScreenRequirements from 'hooks/useMeetsScreenRequirements';
 import join from 'lodash/join';
 import { handleKeyUp, transformStyleToMap } from 'lib/helpers';
 import Image from 'next/image';
-import VanillaTilt from 'vanilla-tilt';
+// import VanillaTilt from 'vanilla-tilt';
 import styles from './BusinessCard.module.scss';
 
 const BusinessCard = ({
@@ -15,23 +21,22 @@ const BusinessCard = ({
   jobTitle,
   logo,
   emails,
-  phoneNumbers,
   socialUrls,
 }) => {
   const [showFront, setShowFront] = useState(true);
-  const [flipping, setFlipping] = useState(false);
   const businessCardRef = useRef(null);
+  const { widthMet } = useMeetsScreenRequirements({width: 500});
 
-  useEffect(() => {
-    if (businessCardRef.current) {
-      VanillaTilt.init(businessCardRef.current, {
-        max: 15,
-        reverse: true,
-        scale: 1.05,
-        speed: 500,
-      });
-    }
-  }, [businessCardRef]);
+  // useEffect(() => {
+  //   if (businessCardRef.current) {
+  //     VanillaTilt.init(businessCardRef.current, {
+  //       max: 15,
+  //       reverse: true,
+  //       scale: 1.05,
+  //       speed: 500,
+  //     });
+  //   }
+  // }, [businessCardRef]);
 
   const fullName = join([firstname, middlenames, lastname], ' ');
 
@@ -77,8 +82,8 @@ const BusinessCard = ({
       </div>
       <div className={styles.business_card__back__footer}>
         <ul>
-          <li>{`P: ${phoneNumbers.cellPhone}`}</li>
           <li>{`E: ${emails.workEmail}`}</li>
+          <li>{`G: ${socialUrls.github}`}</li>
           <li>{`W: ${socialUrls.linkedIn}`}</li>
         </ul>
       </div>
@@ -88,19 +93,23 @@ const BusinessCard = ({
   const renderSide = () => (showFront ? front : back);
 
   const flipCard = async () => {
-    setFlipping(true);
-    const currentTilt = businessCardRef.current.style.transform;
+    const currentTilt = businessCardRef.current.style?.transform;
     const transformMap = transformStyleToMap(currentTilt);
     businessCardRef.current.style.transform = `${currentTilt} rotate3d(0, 1, 0, ${
-      -90 - transformMap?.rotateY.value
+      -180 - (transformMap?.rotateY?.value ?? 0)
     }deg)`;
     await new Promise((resolve) => setTimeout(resolve, 500));
-    setFlipping(false);
+    // businessCardRef.current.style.transform = `${currentTilt} rotateY(${-1 * transformMap?.rotateY.value}${transformMap?.rotateY.unit})`;
     businessCardRef.current.style.transform = currentTilt;
     setShowFront(!showFront);
   };
 
-  return (
+  return (<>
+    {!widthMet && (
+      <Overlay>
+        <h1>Please rotate your screen for the best viewing experience.</h1>
+      </Overlay>
+    )}
     <div className={styles.business_card_container}>
       <div
         className={classnames('business_card', styles.business_card_body)}
@@ -109,13 +118,13 @@ const BusinessCard = ({
         ref={businessCardRef}
         role="button"
         tabIndex={0}
-        data-tilt
+        // data-tilt
       >
         <div className={styles.business_card__drop_shadow} />
-        {!flipping && renderSide()}
+        {renderSide()}
       </div>
     </div>
-  );
+  </>);
 };
 
 BusinessCard.propTypes = {
