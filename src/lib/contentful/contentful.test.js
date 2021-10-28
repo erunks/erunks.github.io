@@ -7,7 +7,7 @@ import {
   mockBusinessCards,
   mockSocialLinks,
   mockWorkExperiences,
-} from 'mocks/contentful'
+} from 'mocks/contentful';
 import {
   BUSINESS_CARD_FIELDS,
   SOCIAL_FIELDS,

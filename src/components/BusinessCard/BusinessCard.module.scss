@@ -31,8 +31,8 @@
     @include stretch-to-edge;
 
     backface-visibility: hidden;
-    background-color: rgba($off-white, 0.35);
-    box-shadow: 0 0 10px 4px rgba($off-white, 0.35);
+    background-color: rgba($off-white, 0.25);
+    box-shadow: 0 0 10px 4px rgba($off-white, 0.25);
     transform: translateZ(5px);
 
     hr {
@@ -62,7 +62,8 @@
     transform: rotateY(0deg);
     z-index: 2;
 
-    *, hr {
+    *,
+    hr {
       border-top-color: $off-white;
       color: $off-white;
     }

@@ -20,7 +20,7 @@ const BusinessCard = ({
 }) => {
   const [showFront, setShowFront] = useState(true);
   const businessCardRef = useRef(null);
-  const { widthMet } = useMeetsScreenRequirements({width: 500});
+  const { widthMet } = useMeetsScreenRequirements({ width: 500 });
 
   const fullName = join([firstname, middlenames, lastname], ' ');
 
@@ -76,31 +76,31 @@ const BusinessCard = ({
 
   const flipCard = () => setShowFront(!showFront);
 
-  return (<>
-    {!widthMet && (
-      <Overlay>
-        <h1>Please rotate your screen for the best viewing experience.</h1>
-      </Overlay>
-    )}
-    <div className={styles.business_card_container}>
-      <div
-        className={classnames(
-          'business_card',
-          styles.business_card_body,
-          { [styles.business_card__flipped]: !showFront }
-        )}
-        onClick={flipCard}
-        onKeyUp={(e) => handleKeyUp(e, flipCard)}
-        ref={businessCardRef}
-        role="button"
-        tabIndex={0}
-        data-tilt
-      >
-        {front}
-        {back}
+  return (
+    <>
+      {!widthMet && (
+        <Overlay>
+          <h1>Please rotate your screen for the best viewing experience.</h1>
+        </Overlay>
+      )}
+      <div className={styles.business_card_container}>
+        <div
+          className={classnames('business_card', styles.business_card_body, {
+            [styles.business_card__flipped]: !showFront,
+          })}
+          onClick={flipCard}
+          onKeyUp={(e) => handleKeyUp(e, flipCard)}
+          ref={businessCardRef}
+          role="button"
+          tabIndex={0}
+          data-tilt
+        >
+          {front}
+          {back}
+        </div>
       </div>
-    </div>
-  </>);
+    </>
+  );
 };
 
 BusinessCard.propTypes = {

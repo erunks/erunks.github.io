@@ -6,5 +6,5 @@ export const handleKeyUp = (e, callback) => {
 };
 
 export default {
-  handleKeyUp
+  handleKeyUp,
 };
