@@ -1,16 +1,11 @@
-import {
-  // useEffect,
-  useState,
-  useRef
-} from 'react';
+import { useState, useRef } from 'react';
 import { businessCard } from 'prop_types';
 import classnames from 'classnames';
 import Overlay from 'components/Overlay';
 import useMeetsScreenRequirements from 'hooks/useMeetsScreenRequirements';
 import join from 'lodash/join';
-import { handleKeyUp, transformStyleToMap } from 'lib/helpers';
+import { handleKeyUp } from 'lib/helpers';
 import Image from 'next/image';
-// import VanillaTilt from 'vanilla-tilt';
 import styles from './BusinessCard.module.scss';
 
 const BusinessCard = ({
@@ -26,17 +21,6 @@ const BusinessCard = ({
   const [showFront, setShowFront] = useState(true);
   const businessCardRef = useRef(null);
   const { widthMet } = useMeetsScreenRequirements({width: 500});
-
-  // useEffect(() => {
-  //   if (businessCardRef.current) {
-  //     VanillaTilt.init(businessCardRef.current, {
-  //       max: 15,
-  //       reverse: true,
-  //       scale: 1.05,
-  //       speed: 500,
-  //     });
-  //   }
-  // }, [businessCardRef]);
 
   const fullName = join([firstname, middlenames, lastname], ' ');
 
@@ -90,19 +74,7 @@ const BusinessCard = ({
     </div>
   );
 
-  const renderSide = () => (showFront ? front : back);
-
-  const flipCard = async () => {
-    const currentTilt = businessCardRef.current.style?.transform;
-    const transformMap = transformStyleToMap(currentTilt);
-    businessCardRef.current.style.transform = `${currentTilt} rotate3d(0, 1, 0, ${
-      -180 - (transformMap?.rotateY?.value ?? 0)
-    }deg)`;
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    // businessCardRef.current.style.transform = `${currentTilt} rotateY(${-1 * transformMap?.rotateY.value}${transformMap?.rotateY.unit})`;
-    businessCardRef.current.style.transform = currentTilt;
-    setShowFront(!showFront);
-  };
+  const flipCard = () => setShowFront(!showFront);
 
   return (<>
     {!widthMet && (
@@ -112,16 +84,20 @@ const BusinessCard = ({
     )}
     <div className={styles.business_card_container}>
       <div
-        className={classnames('business_card', styles.business_card_body)}
+        className={classnames(
+          'business_card',
+          styles.business_card_body,
+          { [styles.business_card__flipped]: !showFront }
+        )}
         onClick={flipCard}
         onKeyUp={(e) => handleKeyUp(e, flipCard)}
         ref={businessCardRef}
         role="button"
         tabIndex={0}
-        // data-tilt
+        data-tilt
       >
-        <div className={styles.business_card__drop_shadow} />
-        {renderSide()}
+        {front}
+        {back}
       </div>
     </div>
   </>);
