@@ -1,28 +1,33 @@
 import { useState, useRef } from 'react';
 import { businessCard } from 'prop_types';
+import axios from 'axios';
 import classnames from 'classnames';
 import Overlay from 'components/Overlay';
 import useMeetsScreenRequirements from 'hooks/useMeetsScreenRequirements';
 import join from 'lodash/join';
+import split from 'lodash/split';
 import { handleKeyUp } from 'lib/helpers';
 import Image from 'next/image';
 import styles from './BusinessCard.module.scss';
 
-const BusinessCard = ({
-  firstname,
-  middlenames,
-  lastname,
-  organization,
-  jobTitle,
-  logo,
-  emails,
-  socialUrls,
-}) => {
+const BusinessCard = (businessCardInfo) => {
+  const {
+    firstname,
+    middlenames,
+    lastname,
+    organization,
+    jobTitle,
+    logo,
+    emails,
+    socialUrls,
+  } = businessCardInfo;
+
   const [showFront, setShowFront] = useState(true);
   const businessCardRef = useRef(null);
   const { widthMet } = useMeetsScreenRequirements({ width: 500 });
 
   const fullName = join([firstname, middlenames, lastname], ' ');
+  const jobDetails = join([jobTitle, organization], ' - ');
 
   const front = (
     <div
@@ -61,7 +66,7 @@ const BusinessCard = ({
         <div>
           <h2>{fullName}</h2>
           <hr />
-          <h3>{`${jobTitle} - ${organization}`}</h3>
+          <h3>{jobDetails}</h3>
         </div>
       </div>
       <div className={styles.business_card__back__footer}>
@@ -75,6 +80,26 @@ const BusinessCard = ({
   );
 
   const flipCard = () => setShowFront(!showFront);
+  const downloadCard = async () => {
+    await axios.post(
+      `${window.location.origin}/api/vcf`,
+      { info: businessCardInfo }
+    ).then(
+      ({ data, headers }) => {
+        const contentDisposition = headers['content-disposition'];
+        const contentType = headers['content-type'];
+        const filename = JSON.parse(split(contentDisposition, 'filename=').pop());
+
+        const a = document.createElement('a');
+        a.href = `data:${contentType};charset=utf-8,${encodeURIComponent(data)}`;
+        a.download = filename;
+        a.click();
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  };
 
   return (
     <>
@@ -99,6 +124,13 @@ const BusinessCard = ({
           {back}
         </div>
       </div>
+      <button 
+        className={styles.business_card__download}
+        type="button"
+        onClick={downloadCard}
+      >
+        &darr;
+      </button>
     </>
   );
 };

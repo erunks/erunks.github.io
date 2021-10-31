@@ -101,6 +101,24 @@
   }
 }
 
+.business_card__download {
+  @include flex-center;
+  
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: $off-white;
+  border-radius: 50%;
+  color: $black;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 500;
+  height: 50px;
+  line-height: 1em;
+  text-decoration: underline;
+  width: 50px;
+}
+
 .logo {
   @include flex-center;
 
