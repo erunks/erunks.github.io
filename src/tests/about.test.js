@@ -2,7 +2,7 @@ import { render } from 'testUtils';
 import * as contentfulTransformers from '@contentful/rich-text-from-markdown';
 import * as contentful from 'lib/contentful';
 import { richTextWorkExperiences } from 'mocks/richTextWorkExperiences';
-import About, { getStaticProps } from '../about';
+import About, { getStaticProps } from 'pages/about';
 
 describe('<About />', () => {
   const route = '/about';

@@ -1,7 +1,7 @@
 import { render } from 'testUtils';
 import * as contentful from 'lib/contentful';
 import { mockBusinessCards } from 'mocks/contentful';
-import Card, { getStaticProps } from '../card';
+import Card, { getStaticProps } from 'pages/card';
 
 describe('<Card />', () => {
   const route = '/card';

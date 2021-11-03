@@ -1,5 +1,5 @@
 import { render } from 'testUtils';
-import Home from '../index';
+import Home from 'pages/index';
 
 describe('(<Home />)', () => {
   test('renders without crashing', () => {
