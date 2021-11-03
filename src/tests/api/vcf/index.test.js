@@ -1,5 +1,5 @@
 import { createMocks } from 'node-mocks-http';
-import handler from 'pages/api/vcf';
+import { handler } from 'pages/api/vcf';
 import { mockBusinessCards } from 'mocks/contentful';
 
 describe('/api/vcf', () => {
