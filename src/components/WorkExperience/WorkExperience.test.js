@@ -1,5 +1,5 @@
 import { render } from 'testUtils';
-import { workExperiences } from 'mocks/workExperiences';
+import { richTextWorkExperiences } from 'mocks/richTextWorkExperiences';
 import WorkExperience from '.';
 
 describe('<WorkExperience />', () => {
@@ -24,7 +24,7 @@ describe('<WorkExperience />', () => {
       data: {},
       nodeType: 'document',
     },
-    ...workExperiences[0],
+    ...richTextWorkExperiences[0],
   };
 
   test('renders without crashing', () => {

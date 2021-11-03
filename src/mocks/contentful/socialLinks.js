@@ -1,4 +1,4 @@
-export const socialLinks = [
+export const mockSocialLinks = [
   {
     icon: {
       url: 'https://www.placecage.com/32/32',
@@ -8,4 +8,4 @@ export const socialLinks = [
   },
 ];
 
-export default socialLinks;
+export default mockSocialLinks;

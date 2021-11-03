@@ -1,0 +1,28 @@
+@import 'styles/local-includes';
+
+.overlay {
+  @include flex-center;
+  @include stretch-to-edge;
+
+  background-color: rgba($black, 0.95);
+  position: fixed;
+  z-index: 1000;
+
+  & > .overlay__button {
+    background: none;
+    border-radius: 10px;
+    font-size: 16pt;
+    margin: 20px;
+    padding: 5px 10px;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  & > .overlay__content {
+    @include flex-center;
+
+    margin: 0 20px;
+    text-align: center;
+  }
+}

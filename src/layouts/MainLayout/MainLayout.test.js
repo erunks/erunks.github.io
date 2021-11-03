@@ -1,12 +1,12 @@
 import { fireEvent, render } from 'testUtils';
 import { sideNavLinks } from 'mocks/sideNavLinks';
-import { socialLinks } from 'mocks/socialLinks';
+import { mockSocialLinks } from 'mocks/contentful';
 import MainLayout from '.';
 
 describe('<MainLayout />', () => {
   const props = {
     links: sideNavLinks,
-    socialLinks,
+    socialLinks: mockSocialLinks,
     title: 'Home',
   };
 

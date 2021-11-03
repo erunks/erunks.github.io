@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ master, main, dev ]
+    branches: [master, main, dev]
   pull_request:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -15,7 +15,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
       # Read node version from `.nvmrc` file
       - id: nvmrc
         uses: browniebroke/read-nvmrc-action@v1
@@ -27,6 +27,6 @@ jobs:
 
       - name: Install `node_modules`
         run: npm install
-        
+
       - name: Tests
         run: npm run test

@@ -3,8 +3,16 @@ import {
   CONTENTFUL_PREVIEW_ACCESS_TOKEN,
   CONTENTFUL_SPACE_ID,
 } from 'lib/constants';
-import { SOCIAL_FIELDS } from './collections/social';
-import { WORK_EXPERIENCE_FIELDS } from './collections/work_experience';
+import {
+  mockBusinessCards,
+  mockSocialLinks,
+  mockWorkExperiences,
+} from 'mocks/contentful';
+import {
+  BUSINESS_CARD_FIELDS,
+  SOCIAL_FIELDS,
+  WORK_EXPERIENCE_FIELDS,
+} from './collections';
 import * as contentful from '.';
 
 const postSpy = jest.spyOn(axios, 'post').mockResolvedValue({ data: {} });
@@ -19,7 +27,7 @@ describe('contentful', () => {
   describe('stringifyQuery', () => {
     test('should return a stringified query', () => {
       const expectedQuery =
-        '{"query":"query { posts(order:name_ASC) { items { name } } }"}';
+        '{"query":"query {\\n posts(order:name_ASC) {\\n items {\\n name\\n }\\n }\\n }"}';
       const query = `query {
         posts(order:name_ASC) { 
           items { 
@@ -38,14 +46,19 @@ describe('contentful', () => {
     const options = { order: 'name_ASC' };
 
     test('it formats the query options correctly', async () => {
-      const expectedQuery =
-        'query { posts(order:name_ASC) { items { name } } }';
-
       await contentful.getAllFromCollection(collectionName, fields, options);
 
       expect(postSpy).toHaveBeenCalledWith(
         graphqlUrl,
-        contentful.stringifyQuery({ query: expectedQuery }),
+        contentful.stringifyQuery(
+          `query {
+            ${collectionName}(order:${options.order}) {
+              items {
+                ${fields}
+              }
+            }
+          }`
+        ),
         {
           headers: graphqlHeaders,
         }
@@ -65,21 +78,46 @@ describe('contentful', () => {
     });
   });
 
+  describe('getAllBusinessCards', () => {
+    test('should post to the graphql endpoint and get the business cards collection', async () => {
+      const mockResponse = {
+        data: {
+          businessCardCollection: {
+            items: mockBusinessCards,
+          },
+        },
+      };
+
+      postSpy.mockResolvedValueOnce({ data: mockResponse });
+
+      const businessCards = await contentful.getAllBusinessCards();
+
+      expect(postSpy).toHaveBeenCalledWith(
+        graphqlUrl,
+        contentful.stringifyQuery(
+          `query {
+            businessCardCollection {
+              items {
+                ${BUSINESS_CARD_FIELDS}
+              }
+            }
+          }`
+        ),
+        {
+          headers: graphqlHeaders,
+        }
+      );
+
+      expect(businessCards).toEqual(mockBusinessCards);
+    });
+  });
+
   describe('getAllSocialLinks', () => {
     test('should post to the graphql endpoint and get the social collection', async () => {
-      const mockedItems = [
-        {
-          icon: {
-            url: 'https://example.com/icon.png',
-          },
-          name: 'Example',
-          url: 'https://example.com',
-        },
-      ];
       const mockResponse = {
         data: {
           socialCollection: {
-            items: mockedItems,
+            items: mockSocialLinks,
           },
         },
       };
@@ -90,41 +128,30 @@ describe('contentful', () => {
 
       expect(postSpy).toHaveBeenCalledWith(
         graphqlUrl,
-        contentful.stringifyQuery({
-          query: `query { socialCollection { items { ${SOCIAL_FIELDS} } } }`,
-        }),
+        contentful.stringifyQuery(
+          `query {
+            socialCollection {
+              items {
+                ${SOCIAL_FIELDS}
+              }
+            }
+          }`
+        ),
         {
           headers: graphqlHeaders,
         }
       );
 
-      expect(socialLinks).toEqual(mockedItems);
+      expect(socialLinks).toEqual(mockSocialLinks);
     });
   });
 
   describe('getAllWorkExperiences', () => {
     test('should post to the graphql endpoint and get the work collection', async () => {
-      const mockedItems = [
-        {
-          altLogo: {
-            url: 'https://example.com/icon.png',
-          },
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          endDate: null,
-          location: 'A Location',
-          logo: {
-            url: 'https://example.com/icon.png',
-          },
-          name: 'Example Company',
-          position: 'A Position',
-          startDate: '2018-01-01T00:00:00.000-05:00',
-        },
-      ];
       const mockResponse = {
         data: {
           workExperienceCollection: {
-            items: mockedItems,
+            items: mockWorkExperiences,
           },
         },
       };
@@ -135,15 +162,21 @@ describe('contentful', () => {
 
       expect(postSpy).toHaveBeenCalledWith(
         graphqlUrl,
-        contentful.stringifyQuery({
-          query: `query { workExperienceCollection { items { ${WORK_EXPERIENCE_FIELDS} } } }`,
-        }),
+        contentful.stringifyQuery(
+          `query {
+            workExperienceCollection {
+              items {
+                ${WORK_EXPERIENCE_FIELDS}
+              }
+            }
+          }`
+        ),
         {
           headers: graphqlHeaders,
         }
       );
 
-      expect(workExperiences).toEqual(mockedItems);
+      expect(workExperiences).toEqual(mockWorkExperiences);
     });
   });
 });

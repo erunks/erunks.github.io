@@ -6,4 +6,4 @@ name,
 url,
 `;
 
-export default { SOCIAL_FIELDS };
+export default SOCIAL_FIELDS;

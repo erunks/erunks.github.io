@@ -1,4 +1,4 @@
-export const workExperiences = [
+export const richTextWorkExperiences = [
   {
     altLogo: { url: 'https://www.placecage.com/600/125' },
     description: {
@@ -30,4 +30,4 @@ export const workExperiences = [
   },
 ];
 
-export default workExperiences;
+export default richTextWorkExperiences;

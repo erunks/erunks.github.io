@@ -8,13 +8,16 @@ import {
 import get from 'lodash/get';
 import join from 'lodash/join';
 import map from 'lodash/map';
-import { SOCIAL_FIELDS } from './collections/social';
-import { WORK_EXPERIENCE_FIELDS } from './collections/work_experience';
+import {
+  BUSINESS_CARD_FIELDS,
+  SOCIAL_FIELDS,
+  WORK_EXPERIENCE_FIELDS,
+} from './collections';
 
 export const stringifyQuery = (query) => {
   const replacer = (_key, value) => {
     if (typeof value === 'string') {
-      return value.replace(/\s?\n\s*/g, ' ');
+      return value.replace(/\s?\n\s*/g, '\n ');
     }
     return value;
   };
@@ -36,7 +39,7 @@ const postGraphQL = async (query, preview = IS_PRODUCTION) => {
       },
     };
 
-    const { data } = await axios.post(url, stringifyQuery({ query }), headers);
+    const { data } = await axios.post(url, stringifyQuery(query), headers);
 
     return data;
   } catch (err) {
@@ -70,6 +73,19 @@ export const getAllFromCollection = async (
   return get(items, `data.${collectionName}.items`, []);
 };
 
+export const getAllBusinessCards = async (
+  options = {},
+  preview = IS_PRODUCTION
+) => {
+  const businessCards = await getAllFromCollection(
+    'businessCardCollection',
+    BUSINESS_CARD_FIELDS,
+    options,
+    preview
+  );
+  return businessCards;
+};
+
 export const getAllSocialLinks = async (
   options = {},
   preview = IS_PRODUCTION
@@ -83,7 +99,10 @@ export const getAllSocialLinks = async (
   return socials;
 };
 
-export const getAllWorkExperiences = async (options = {}, preview = false) => {
+export const getAllWorkExperiences = async (
+  options = {},
+  preview = IS_PRODUCTION
+) => {
   const experiences = await getAllFromCollection(
     'workExperienceCollection',
     WORK_EXPERIENCE_FIELDS,
@@ -94,6 +113,7 @@ export const getAllWorkExperiences = async (options = {}, preview = false) => {
 };
 
 export default {
+  getAllBusinessCards,
   getAllSocialLinks,
   getAllWorkExperiences,
 };
