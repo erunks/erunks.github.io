@@ -4,12 +4,12 @@ const useMeetsScreenRequirements = (
   { width, height } = { width: 0, height: 0 }
 ) => {
   const [body, setBody] = useState(null);
-  const [bodyHeight, setBodyHeight] = useState(body?.clientHeight);
   const [bodyWidth, setBodyWidth] = useState(body?.clientWidth);
+  const [bodyHeight, setBodyHeight] = useState(body?.clientHeight);
 
   const handleResize = useCallback(() => {
-    setBodyHeight(body?.clientHeight);
     setBodyWidth(body?.clientWidth);
+    setBodyHeight(body?.clientHeight);
   }, [body]);
 
   useEffect(() => {
@@ -28,8 +28,8 @@ const useMeetsScreenRequirements = (
   }, [handleResize]);
 
   return {
-    heightMet: bodyHeight >= height,
     widthMet: bodyWidth >= width,
+    heightMet: bodyHeight >= height,
   };
 };
 
