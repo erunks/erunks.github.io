@@ -30,6 +30,13 @@ export const createVcfFromBusinessCard = (vCard, businessCardInfo) => {
   );
 };
 
+export const downloadFile = (filename, contentType, data) => {
+  const link = document.createElement('a');
+  link.href = `data:${contentType};charset=utf-8,${data}`;
+  link.download = filename;
+  link.click();
+};
+
 export const handleKeyUp = (e, callback) => {
   // if keycode is enter or space
   if (e.keyCode === 13 || e.keyCode === 32) {
@@ -39,5 +46,6 @@ export const handleKeyUp = (e, callback) => {
 
 export default {
   createVcfFromBusinessCard,
+  downloadFile,
   handleKeyUp,
 };

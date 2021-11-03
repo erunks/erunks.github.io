@@ -1,10 +1,10 @@
 export const mockSocialLinks = [
   {
     icon: {
-      url: 'https://example.com/icon.png',
+      url: 'https://www.placecage.com/32/32',
     },
-    name: 'Example',
-    url: 'https://example.com',
+    name: 'placecage',
+    url: 'https://www.placecage.com/',
   },
 ];
 

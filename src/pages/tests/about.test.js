@@ -1,20 +1,22 @@
 import { render } from 'testUtils';
 import * as contentfulTransformers from '@contentful/rich-text-from-markdown';
 import * as contentful from 'lib/contentful';
-import { workExperiences } from 'mocks/workExperiences';
+import { richTextWorkExperiences } from 'mocks/richTextWorkExperiences';
 import About, { getStaticProps } from '../about';
 
 describe('<About />', () => {
-  const route = '/route';
+  const route = '/about';
 
-  test('renders without crashing', () => {
-    const { unmount } = render(<About work={workExperiences} />, { route });
+  it('renders without crashing', () => {
+    const { unmount } = render(<About work={richTextWorkExperiences} />, {
+      route,
+    });
     unmount();
   });
 
   describe('#getStaticProps', () => {
     const mockGetAllWorkExperiences = jest.fn(() =>
-      Promise.resolve(workExperiences)
+      Promise.resolve(richTextWorkExperiences)
     );
     const mockRichTextFromMarkdown = jest.fn((val) => Promise.resolve(val));
     jest
@@ -24,12 +26,12 @@ describe('<About />', () => {
       .spyOn(contentfulTransformers, 'richTextFromMarkdown')
       .mockImplementation(mockRichTextFromMarkdown);
 
-    test('returns static props', async () => {
+    it('returns static props', async () => {
       const { props: staticProps } = await getStaticProps(route);
 
       expect(mockGetAllWorkExperiences).toHaveBeenCalled();
       expect(mockRichTextFromMarkdown).toHaveBeenCalled();
-      expect(staticProps.work).toEqual(workExperiences);
+      expect(staticProps.work).toEqual(richTextWorkExperiences);
     });
   });
 });

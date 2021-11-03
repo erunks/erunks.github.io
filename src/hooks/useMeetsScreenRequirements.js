@@ -19,11 +19,11 @@ const useMeetsScreenRequirements = (
     }
 
     window.addEventListener('resize', handleResize);
-    window.screen.orientation.addEventListener('change', handleResize);
+    window.screen?.orientation?.addEventListener('change', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.screen.orientation.removeEventListener('change', handleResize);
+      window.screen?.orientation?.removeEventListener('change', handleResize);
     };
   }, [handleResize]);
 

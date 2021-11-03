@@ -4,7 +4,7 @@ import vCard from 'vcards-js';
 
 export const handler = (req, res) => {
   try {
-    const vcard = createVcfFromBusinessCard(vCard(), req.body.info);    
+    const vcard = createVcfFromBusinessCard(vCard(), req.body.info);
     const filename = `${join([vcard.firstName, vcard.lastName], '_')}.vcf`;
 
     res.statusCode = 200;

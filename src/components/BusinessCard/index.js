@@ -6,7 +6,7 @@ import Overlay from 'components/Overlay';
 import useMeetsScreenRequirements from 'hooks/useMeetsScreenRequirements';
 import join from 'lodash/join';
 import split from 'lodash/split';
-import { handleKeyUp } from 'lib/helpers';
+import { downloadFile, handleKeyUp } from 'lib/helpers';
 import Image from 'next/image';
 import styles from './BusinessCard.module.scss';
 
@@ -51,18 +51,20 @@ const BusinessCard = (businessCardInfo) => {
       )}
     >
       <div className={styles.business_card__back__header}>
-        <div className={styles.logo}>
-          <Image
-            alt={`${fullName} Logo`}
-            className={styles.logo_image}
-            height="auto"
-            loading="lazy"
-            objectFit="contain"
-            src={logo.url}
-            title={`${fullName} Logo`}
-            width="auto"
-          />
-        </div>
+        {logo?.url && (
+          <div className={styles.logo}>
+            <Image
+              alt={`${fullName} Logo`}
+              className={styles.logo_image}
+              height="auto"
+              loading="lazy"
+              objectFit="contain"
+              src={logo.url}
+              title={`${fullName} Logo`}
+              width="auto"
+            />
+          </div>
+        )}
         <div>
           <h2>{fullName}</h2>
           <hr />
@@ -81,24 +83,22 @@ const BusinessCard = (businessCardInfo) => {
 
   const flipCard = () => setShowFront(!showFront);
   const downloadCard = async () => {
-    await axios.post(
-      `${window.location.origin}/api/vcf`,
-      { info: businessCardInfo }
-    ).then(
-      ({ data, headers }) => {
-        const contentDisposition = headers['content-disposition'];
-        const contentType = headers['content-type'];
-        const filename = JSON.parse(split(contentDisposition, 'filename=').pop());
+    await axios
+      .post(`${window.location.origin}/api/vcf`, { info: businessCardInfo })
+      .then(
+        ({ data, headers }) => {
+          const contentDisposition = headers['content-disposition'];
+          const contentType = headers['content-type'];
+          const filename = JSON.parse(
+            split(contentDisposition, 'filename=').pop()
+          );
 
-        const a = document.createElement('a');
-        a.href = `data:${contentType};charset=utf-8,${encodeURIComponent(data)}`;
-        a.download = filename;
-        a.click();
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+          downloadFile(filename, contentType, encodeURIComponent(data));
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
   };
 
   return (
@@ -124,7 +124,7 @@ const BusinessCard = (businessCardInfo) => {
           {back}
         </div>
       </div>
-      <button 
+      <button
         className={styles.business_card__download}
         type="button"
         onClick={downloadCard}
