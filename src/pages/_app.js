@@ -3,6 +3,7 @@ import { socialLink } from 'prop_types';
 import MainLayout from 'layouts/MainLayout';
 import { getAllSocialLinks } from 'lib';
 import find from 'lodash/find';
+import get from 'lodash/get';
 import App from 'next/app';
 import { useRouter } from 'next/router';
 import { RecoilRoot } from 'recoil';
@@ -42,7 +43,7 @@ const MyApp = ({ Component, pageProps, socialLinks }) => {
       <MainLayout
         links={links}
         socialLinks={socialLinks}
-        title={activeLink.text}
+        title={get(activeLink, 'text', '')}
       >
         <Component {...pageProps} />
       </MainLayout>
