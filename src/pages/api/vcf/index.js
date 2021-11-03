@@ -4,6 +4,12 @@ import vCard from 'vcards-js';
 
 export const handler = (req, res) => {
   try {
+    if (req.method !== 'POST') {
+      throw new Error('Method not allowed');
+    } else if (req.body.info === undefined) {
+      throw new Error('No info provided');
+    }
+
     const vcard = createVcfFromBusinessCard(vCard(), req.body.info);
     const filename = `${join([vcard.firstName, vcard.lastName], '_')}.vcf`;
 
