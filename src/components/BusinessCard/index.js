@@ -55,13 +55,11 @@ const BusinessCard = (businessCardInfo) => {
           <div className={styles.logo}>
             <Image
               alt={`${fullName} Logo`}
-              className={styles.logo_image}
-              height="auto"
+              layout="fill"
               loading="lazy"
               objectFit="contain"
               src={logo.url}
               title={`${fullName} Logo`}
-              width="auto"
             />
           </div>
         )}

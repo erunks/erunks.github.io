@@ -49,23 +49,15 @@
 .workLogo {
   align-items: center;
   display: flex;
+  height: 150px;
   justify-content: center;
   margin: 0 30px;
+  max-height: 150px;
+  max-width: 300px;
+  position: relative;
+  width: 300px;
 
   @media (max-width: 768px) {
     margin: 0;
   }
-
-  img[role='presentation'] {
-    @include hidden;
-  }
-}
-
-.logo_image {
-  height: auto !important;
-  // margin: 0 auto !important;
-  max-height: 150px !important;
-  max-width: 300px !important;
-  position: relative !important;
-  width: max-content !important;
 }

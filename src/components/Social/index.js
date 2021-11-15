@@ -9,12 +9,12 @@ const Social = ({ icon, name, url }) => (
       <Image
         alt={`${name} Icon`}
         className={styles.icon}
-        height="36"
+        height={36}
         loading="lazy"
         objectFit="contain"
         src={icon.url}
         title={`${name} Icon`}
-        width="36"
+        width={36}
       />
     </a>
   </div>
