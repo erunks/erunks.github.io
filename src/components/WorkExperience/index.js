@@ -29,13 +29,11 @@ const WorkExperience = ({
       <div className={styles.workLogo}>
         <Image
           alt={`${name} Logo`}
-          className={styles.logo_image}
-          height="auto"
+          layout="fill"
           loading="lazy"
           objectFit="contain"
           src={logo.url}
           title={`${name} Logo`}
-          width="auto"
         />
       </div>
       <div className={styles.workPosition}>
