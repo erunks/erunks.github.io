@@ -47,10 +47,9 @@
 }
 
 .workLogo {
-  align-items: center;
-  display: flex;
+  @include flex-center;
+
   height: 150px;
-  justify-content: center;
   margin: 0 30px;
   max-height: 150px;
   max-width: 300px;

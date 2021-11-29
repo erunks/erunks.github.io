@@ -8,6 +8,7 @@ import App from 'next/app';
 import { useRouter } from 'next/router';
 import { RecoilRoot } from 'recoil';
 import Card from './card';
+import Home from './index';
 
 import 'styles/globals.scss';
 
@@ -30,7 +31,7 @@ const MyApp = ({ Component, pageProps, socialLinks }) => {
   const { pathname } = useRouter();
   const activeLink = find(links, ['href', pathname]);
 
-  if (Component === Card) {
+  if (Component === Card || Component === Home) {
     return (
       <RecoilRoot>
         <Component {...pageProps} />

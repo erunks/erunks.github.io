@@ -1,0 +1,41 @@
+@import 'styles/local-includes';
+
+.intro_section__container {
+  background-color: rgba(#000, 0.75);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: 1fr;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+
+  @media screen and (max-width: $sm) {
+    @include flex-center;
+    flex-direction: column;
+  }
+}
+
+.intro_section__content,
+.intro_section__profile_icon_container {
+  @include flex-center;
+  flex-direction: column;
+}
+
+.intro_section__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+// .intro_section__title_highlight {
+//   @include flex-center;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   font-size: 2.5rem;
+//   font-weight: bold;
+//   color: #fff;
+//   text-shadow: 0 0 1px #000;
+//   margin-bottom: 1rem;
+// }

@@ -1,0 +1,12 @@
+@import 'styles/local-includes';
+
+.profile_icon__container {
+  & > span {
+    overflow: visible !important;
+  }
+}
+
+.profile_icon {
+  border-radius: 100%;
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.25);
+}
