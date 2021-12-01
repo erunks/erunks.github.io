@@ -62,10 +62,9 @@ MyApp.getInitialProps = async (appContext) => {
   };
 };
 
-/* eslint-disable react/forbid-prop-types */
 MyApp.propTypes = {
   Component: elementType.isRequired,
-  pageProps: any,
+  pageProps: any, /* eslint-disable-line react/forbid-prop-types */
   socialLinks: arrayOf(shape({ ...socialLink })).isRequired,
 };
 

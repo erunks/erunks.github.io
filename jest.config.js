@@ -15,6 +15,7 @@ module.exports = {
     '!**/src/lib/constants.js',
     '!**/src/lib/contentful/collections/**',
     '!**/src/mocks/**',
+    '!**/src/pages/_**.{js,jsx}',
     '!**/src/prop_types/**',
     '!**/src/recoils/**',
   ],
