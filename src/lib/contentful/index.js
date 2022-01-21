@@ -27,7 +27,7 @@ export const stringifyQuery = (query) => {
   return stringifiedQuery;
 };
 
-const postGraphQL = async (query, preview = IS_PRODUCTION) => {
+const postGraphQL = async (query, preview = !IS_PRODUCTION) => {
   try {
     const url = `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`;
     const headers = {
@@ -51,7 +51,7 @@ export const getAllFromCollection = async (
   collectionName,
   fields = '',
   options = {},
-  preview = IS_PRODUCTION
+  preview = !IS_PRODUCTION
 ) => {
   const queryOptions = join(
     map(options, (value, key) => `${key}:${value}`),
@@ -75,7 +75,7 @@ export const getAllFromCollection = async (
 
 export const getAllBusinessCards = async (
   options = {},
-  preview = IS_PRODUCTION
+  preview = !IS_PRODUCTION
 ) => {
   const businessCards = await getAllFromCollection(
     'businessCardCollection',
@@ -88,7 +88,7 @@ export const getAllBusinessCards = async (
 
 export const getAllSocialLinks = async (
   options = {},
-  preview = IS_PRODUCTION
+  preview = !IS_PRODUCTION
 ) => {
   const socials = await getAllFromCollection(
     'socialCollection',
@@ -101,7 +101,7 @@ export const getAllSocialLinks = async (
 
 export const getAllWorkExperiences = async (
   options = {},
-  preview = IS_PRODUCTION
+  preview = !IS_PRODUCTION
 ) => {
   const experiences = await getAllFromCollection(
     'workExperienceCollection',
