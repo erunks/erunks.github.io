@@ -1,0 +1,14 @@
+@import 'styles/local-includes';
+
+.social {
+  display: flex;
+}
+
+.icon {
+  filter: invert(1);
+  transition: 200ms ease-in-out;
+
+  &:hover {
+    filter: invert(1);
+  }
+}

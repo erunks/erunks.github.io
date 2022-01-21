@@ -1,0 +1,38 @@
+@import 'styles/local-includes';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+  background-color: $black;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+
+  li {
+    column-gap: 1em;
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    &:before {
+      content: '-';
+    }
+
+    p {
+      margin-block: auto;
+    }
+  }
+}
+
+* {
+  color: invert($black);
+  box-sizing: border-box;
+}

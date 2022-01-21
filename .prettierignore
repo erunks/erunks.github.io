@@ -1,0 +1,4 @@
+.husky
+.next
+coverage
+node_modules

@@ -1,0 +1,131 @@
+@import 'styles/local-includes';
+
+.business_card_container {
+  @include stretch-to-edge;
+  @include flex-center;
+
+  perspective: 1000px;
+}
+
+.business_card_body {
+  @include flex-center;
+
+  background-color: $white;
+  max-height: 250px;
+  max-width: 450px;
+  min-height: 250px;
+  min-width: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.6s;
+
+  &.business_card__flipped {
+    transform: rotateY(-180deg);
+  }
+
+  * {
+    color: $black;
+  }
+
+  & > .business_card__side {
+    @include stretch-to-edge;
+
+    backface-visibility: hidden;
+    background-color: rgba($off-white, 0.25);
+    box-shadow: 0 0 10px 4px rgba($off-white, 0.25);
+    transform: translateZ(5px);
+
+    hr {
+      border: none;
+      border-top: 1px solid $black;
+      margin: 2px 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    p {
+      margin: 0;
+    }
+  }
+
+  & > .business_card__front {
+    @include flex-center;
+
+    background-color: darken($light-black, 5%);
+    color: $white;
+    flex-direction: column;
+    transform: rotateY(0deg);
+    z-index: 2;
+
+    *,
+    hr {
+      border-top-color: $off-white;
+      color: $off-white;
+    }
+  }
+
+  & > .business_card__back {
+    background-color: $off-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 10px;
+    transform: rotateY(180deg);
+
+    .business_card__back__header {
+      @include flex-center;
+    }
+
+    .business_card__back__footer {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+
+      ul,
+      li {
+        font-size: 10pt;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li::before {
+        content: '';
+      }
+    }
+  }
+}
+
+.business_card__download {
+  @include flex-center;
+
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: $off-white;
+  border-radius: 50%;
+  color: $black;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 500;
+  height: 50px;
+  line-height: 1em;
+  text-decoration: underline;
+  width: 50px;
+}
+
+.logo {
+  @include flex-center;
+
+  height: 120px;
+  margin: 0 30px 0 0;
+  max-height: 120px;
+  max-width: 120px;
+  position: relative;
+  width: 120px;
+}

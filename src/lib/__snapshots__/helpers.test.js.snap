@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`helpers #createVcfFromBusinessCard should create a vcf from a business card 1`] = `
+Object {
+  "addresses": null,
+  "birthday": undefined,
+  "emails": Object {
+    "workEmail": "john.smith@email.com",
+  },
+  "faxNumbers": null,
+  "firstName": "",
+  "firstname": "John",
+  "jobTitle": "A Position",
+  "lastName": "",
+  "lastname": "Smith",
+  "logo": Object {
+    "url": "https://example.com/icon.png",
+  },
+  "middleName": "",
+  "middlenames": Array [
+    "A.",
+  ],
+  "namePrefix": "",
+  "nameSuffix": "",
+  "organization": "",
+  "phoneNumbers": Object {
+    "cellPhone": "555-123-4567",
+  },
+  "prefix": null,
+  "socialUrls": Object {
+    "linkedIn": "https://www.linkedin.com/in/johnasmith/",
+  },
+  "title": "",
+  "uid": "",
+  "uuid": "1",
+}
+`;

@@ -1,0 +1,3 @@
+{
+  "*.js": ["npm run pretty:staged", "npm run lint:fix"]
+}
