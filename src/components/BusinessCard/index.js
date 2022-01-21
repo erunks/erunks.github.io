@@ -7,6 +7,7 @@ import useMeetsScreenRequirements from 'hooks/useMeetsScreenRequirements';
 import join from 'lodash/join';
 import split from 'lodash/split';
 import { downloadFile, handleKeyUp } from 'lib/helpers';
+import contentfulImageLoader from 'services/contentfulImageLoader';
 import Image from 'next/image';
 import styles from './BusinessCard.module.scss';
 
@@ -56,6 +57,7 @@ const BusinessCard = (businessCardInfo) => {
             <Image
               alt={`${fullName} Logo`}
               layout="fill"
+              loader={contentfulImageLoader}
               loading="lazy"
               objectFit="contain"
               src={logo.url}
