@@ -1,14 +1,29 @@
 import { render } from 'testUtils';
-import Home from 'pages/index';
+import * as contentful from 'lib/contentful';
+import { mockBusinessCards } from 'mocks/contentful';
+import Card, { getStaticProps } from 'pages';
 
-describe('(<Home />)', () => {
-  test('renders without crashing', () => {
-    const { unmount } = render(<Home />);
+describe('<Card />', () => {
+  const route = '/card';
+
+  it('renders without crashing', () => {
+    const { unmount } = render(<Card card={mockBusinessCards[0]} />, { route });
     unmount();
   });
 
-  test.skip('renders the home page', () => {
-    const { getByText } = render(<Home />);
-    expect(getByText('Index')).toBeInTheDocument();
+  describe('#getStaticProps', () => {
+    const mockGetAllBusinessCards = jest.fn(() =>
+      Promise.resolve(mockBusinessCards)
+    );
+    jest
+      .spyOn(contentful, 'getAllBusinessCards')
+      .mockImplementation(mockGetAllBusinessCards);
+
+    it('returns static props', async () => {
+      const { props: staticProps } = await getStaticProps(route);
+
+      expect(mockGetAllBusinessCards).toHaveBeenCalled();
+      expect(staticProps.card).toEqual(mockBusinessCards[0]);
+    });
   });
 });

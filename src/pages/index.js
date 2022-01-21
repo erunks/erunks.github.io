@@ -1,14 +1,20 @@
-import BackgroundImage from 'components/BackgroundImage';
-import IntroSection from 'components/IntroSection';
+import { shape } from 'prop-types';
+import { businessCard } from 'prop_types';
+import BusinessCard from 'components/BusinessCard';
+import { getAllBusinessCards } from 'lib';
 
-const Home = () => (
-  <>
-    <BackgroundImage
-      src="https://ik.imagekit.io/ozcerk4wii/assets/moss.jpg"
-      alt="moss"
-    />
-    <IntroSection />
-  </>
-);
+const Card = ({ card }) => <BusinessCard {...card} />;
 
-export default Home;
+export const getStaticProps = async () => {
+  const businessCards = await getAllBusinessCards();
+
+  return {
+    props: { card: businessCards[0] },
+  };
+};
+
+Card.propTypes = {
+  card: shape(businessCard).isRequired,
+};
+
+export default Card;
