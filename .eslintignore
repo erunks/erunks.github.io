@@ -1,8 +1,0 @@
-.husky
-.next
-coverage
-node_modules
-public
-
-jest.*.js
-src/testUtils.js
