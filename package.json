@@ -31,7 +31,7 @@
   "dependencies": {
     "@contentful/rich-text-from-markdown": "^14.1.2",
     "@contentful/rich-text-react-renderer": "^15.11.1",
-    "axios": "^0.24.0",
+    "axios": "^0.25.0",
     "classnames": "^2.3.1",
     "contentful": "^8.1.9",
     "husky": "^7.0.4",
