@@ -29,7 +29,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@contentful/rich-text-from-markdown": "^14.1.2",
+    "@contentful/rich-text-from-markdown": "^15.11.1",
     "@contentful/rich-text-react-renderer": "^15.11.1",
     "axios": "^0.25.0",
     "classnames": "^2.3.1",
