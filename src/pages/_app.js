@@ -4,9 +4,11 @@ import { RecoilRoot } from 'recoil';
 import 'styles/globals.scss';
 
 const MyApp = ({ Component, pageProps }) => (
-  <RecoilRoot>
-    <Component {...pageProps} />
-  </RecoilRoot>
+  <>
+    <RecoilRoot>
+      <Component {...pageProps} />
+    </RecoilRoot>
+  </>
 );
 
 MyApp.propTypes = {

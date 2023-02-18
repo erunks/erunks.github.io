@@ -12,7 +12,7 @@
   "scripts": {
     "build": "next build",
     "coverage": "open ./coverage/lcov-report/index.html",
-    "dev": "NODE_OPTIONS='--inspect' next dev -- -p 80",
+    "dev": "NODE_OPTIONS='--inspect' next dev -- -p 8080",
     "export": "next export",
     "git:update": "git add -u",
     "lint:all": "eslint ./src",

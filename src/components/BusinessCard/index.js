@@ -4,6 +4,7 @@ import axios from 'axios';
 import classnames from 'classnames';
 import Overlay from 'components/Overlay';
 import useMeetsScreenRequirements from 'hooks/useMeetsScreenRequirements';
+import compact from 'lodash/compact';
 import join from 'lodash/join';
 import split from 'lodash/split';
 import { downloadFile, handleKeyUp } from 'lib/helpers';
@@ -27,8 +28,8 @@ const BusinessCard = (businessCardInfo) => {
   const businessCardRef = useRef(null);
   const { widthMet } = useMeetsScreenRequirements({ width: 500 });
 
-  const fullName = join([firstname, middlenames, lastname], ' ');
-  const jobDetails = join([jobTitle, organization], ' - ');
+  const fullName = join(compact([firstname, middlenames, lastname]), ' ');
+  const jobDetails = join(compact([jobTitle, organization]), ' - ');
 
   const front = (
     <div
