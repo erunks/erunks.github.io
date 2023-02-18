@@ -5,6 +5,11 @@
   "description": "A web portfolio.",
   "license": "ISC",
   "main": "index.js",
+  "engines": {
+    "node": ">=16.11.0",
+    "npm": ">=8.0.0"
+  },
+  "engineStrict": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/erunks/erunks.github.io.git"
